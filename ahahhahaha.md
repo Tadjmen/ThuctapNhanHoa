@@ -22,7 +22,6 @@
 >     return shell_exec("echo $input | $markdown_script");
 >	  ahahahah("ahahaha")
 
-
-	  ahahahah(code)
+  vi du code
 
 ahahaha AT&amp;T
