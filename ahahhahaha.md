@@ -2,9 +2,9 @@
 
 <table border="1">
     <tr>
-        <td width="33%">1</td>
-		<td width="34%">2</td>
-		<td width="33%">3</td>
+        <td width="330%">1</td>
+		<td width="340%">2</td>
+		<td width="330%">3</td>
     </tr>
 	<tr>
         <td width="33%">4</td>
