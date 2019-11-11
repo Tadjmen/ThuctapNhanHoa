@@ -29,8 +29,8 @@ Ví dụ ảnh
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
 
-<a name="dinhdangtext">
-Định dạng văn bản
+<a href="#dinhdangtext">
+Định dạng văn bản</a>
 
 *1 dấu sao để in nghiêng* </br>
 **2 dấu sao để in đậm** </br>
