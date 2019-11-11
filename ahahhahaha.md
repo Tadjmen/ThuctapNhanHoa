@@ -32,4 +32,17 @@ Bấm vào sẽ ra hình này
 **2 dấu sao để in đậm** </br>
 ```Bo khung chữ bằng 3 phím dấu huyền ``` </br>
 
+
+- Gạch đầu dòng thứ nhất
+  
+  - Thụt với đầu dòng 1
+  
+  - Thụt với đầu dòng 1
+ 
+- Gạch đầu dòng thứ hai
+  
+  - Thụt với đầu dòng 2
+  
+  - Thụt với đầu dòng 2
+
 ## 2019 Ngô Cát Tường
