@@ -9,21 +9,13 @@
 </table>
 
 
-<code>
-<table>
-    <tr>
-        <td>1</td>
-		<td>2</td>
-		<td>3</td>
-    </tr>
-</table>
-</code>
+
 
 ### Thẻ H3 ######
 
 
 > 
-> 1.   This is the first list item.
+> 1.   [Định dạng văn bản](#dinhdangtext)
 > 2.   This is the second list item.
 > 
 > Here's some example code:
@@ -36,6 +28,9 @@ Ví dụ ảnh
 [Link ảnh](https://imgur.com/IMwnYrc)
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
+
+<a name="dinhdangtext">
+Định dạng văn bản
 
 *1 dấu sao để in nghiêng* </br>
 **2 dấu sao để in đậm** </br>
