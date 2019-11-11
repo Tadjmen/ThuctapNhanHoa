@@ -2,19 +2,19 @@
 
 <table border="1">
     <tr>
-        <td width="33">1</td>
-		<td width="34">2</td>
-		<td width="33">3</td>
+        <td width="33%">1</td>
+		<td width="34%">2</td>
+		<td width="33%">3</td>
     </tr>
 	<tr>
-        <td width="33">4</td>
-		<td width="34">5</td>
-		<td width="33">6</td>
+        <td width="33%">4</td>
+		<td width="34%">5</td>
+		<td width="33%">6</td>
     </tr>
 	<tr>
-        <td width="33">7</td>
-		<td width="34">8</td>
-		<td width="33">9</td>
+        <td width="33%">7</td>
+		<td width="34%">8</td>
+		<td width="33%">9</td>
     </tr>
 </table>
 
