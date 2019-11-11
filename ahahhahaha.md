@@ -2,16 +2,15 @@
 
 <table border="1">
     <tr>
-        <td width="33%">1</td>
-		<td width="34%">2</td>
-		<td width="33%">3</td>
+        <td align="left">1</td>
+		<td align="center">2</td>
+		<td align="right">3</td>
     </tr>
 	
 </table>
 
-## This is an H2 ##
 
-### This is an H3 ######
+### Thẻ H3 ######
 
 
 > ## This is a header.
