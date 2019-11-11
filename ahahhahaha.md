@@ -1,18 +1,27 @@
 # Tuong-em Repository #
 
-<table border="1">
+<table>
     <tr>
-        <td align="left">1</td>
-		<td align="center">2</td>
-		<td align="right">3</td>
+        <td>1</td>
+		<td>2</td>
+		<td>3</td>
     </tr>
 </table>
 
 
+<code>
+<table>
+    <tr>
+        <td>1</td>
+		<td>2</td>
+		<td>3</td>
+    </tr>
+</table>
+</code>
+
 ### Thẻ H3 ######
 
 
-> ## This is a header.
 > 
 > 1.   This is the first list item.
 > 2.   This is the second list item.
@@ -20,7 +29,7 @@
 > Here's some example code:
 > 
 >     return shell_exec("echo $input | $markdown_script");
->	  ahahahah("ahahaha")
+>	  tab + 2 dấu cách để bo như này ahahahah("ahahaha")
 
 
 Ví dụ ảnh
