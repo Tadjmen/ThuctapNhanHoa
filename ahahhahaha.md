@@ -17,6 +17,7 @@
 > 
 > 1.   [Định dạng ảnh](#dinhdanganh)
 > 2.   [Định dạng văn bản](#dinhdangtext)
+> 3.   [Tạo bảng](#taobang)
 > 
 > Here's some example code:
 > 
@@ -24,7 +25,8 @@
 >	  tab + 2 dấu cách để bo như này ahahahah("ahahaha")
 
 
-<a name="dinhdanganh">##Ví dụ ảnh</a>
+<a name="dinhdanganh"></a>
+## Ví dụ ảnh
 [Link ảnh](https://imgur.com/IMwnYrc)
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
@@ -35,7 +37,8 @@ Bấm vào sẽ ra hình này
 **2 dấu sao để in đậm** </br>
 ```Bo khung chữ bằng 3 phím dấu huyền ``` </br>
 
-
+<a name="gachdaudong"></a>
+## Gạch đầu dòng
 - Gạch đầu dòng thứ nhất tạo ra thẻ li
   
   - Thụt với đầu dòng 1 sẽ tạo li con
@@ -48,7 +51,8 @@ Bấm vào sẽ ra hình này
   
   - Thụt với đầu dòng 2 sẽ tạo li con
   
-  
+ <a name="taobang"></a>
+ ## Tạo bảng
  | Cột 1 Hàng 1 | Cột 2 | Cột 3| Cột 4 |
  |--------------|-------|------|-------|
 | Hàng 2 | 2 x 1 | 2 x 2 | 2 x 3 | 2 x 4 |
