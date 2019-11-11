@@ -30,3 +30,9 @@
     beep
 end tell
 </code></pre>
+
+
+
+ <div class="footer">
+        &copy; 2019 Ngô Cát Tường
+    </div>
