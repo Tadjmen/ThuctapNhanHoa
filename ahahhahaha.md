@@ -22,14 +22,8 @@
 >     return shell_exec("echo $input | $markdown_script");
 >	  ahahahah("ahahaha")
 
-	  vi du code
-
-<p>Here is an example of AppleScript:</p>
-
-<pre><code>tell application "Foo"
-    beep
-end tell
-</code></pre>
-
+	  Ví dụ ảnh
+	  [Link ảnh](https://imgur.com/IMwnYrc)
+	<img src="https://imgur.com/IMwnYrc">
 
 ## 2019 Ngô Cát Tường
