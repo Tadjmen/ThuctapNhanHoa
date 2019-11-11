@@ -25,6 +25,12 @@
 
 Ví dụ ảnh
 [Link ảnh](https://imgur.com/IMwnYrc)
-<img src="https://imgur.com/IMwnYrc">
+Bấm vào sẽ ra hình này
+<img src="https://i.imgur.com/IMwnYrc.jpg">
+
+*1 dấu sao để in nghiêng*
+**2 dấu sao để in đậm**
+`Bo khung chữ bằng dấu 
+này `
 
 ## 2019 Ngô Cát Tường
