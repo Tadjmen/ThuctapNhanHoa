@@ -32,4 +32,4 @@ end tell
 </code></pre>
 
 
-##&copy; 2019 Ngô Cát Tường
+## 2019 Ngô Cát Tường
