@@ -32,4 +32,4 @@ end tell
 </code></pre>
 
 
-##<div class="footer" align="right">&copy; 2019 Ngô Cát Tường</div>
+##&copy; 2019 Ngô Cát Tường
