@@ -15,8 +15,8 @@
 
 
 > 
-> 1.   [Định dạng văn bản](#dinhdangtext)
-> 2.   This is the second list item.
+> 1.   [Định dạng ảnh](#dinhdanganh)
+> 2.   [Định dạng văn bản](#dinhdangtext)
 > 
 > Here's some example code:
 > 
@@ -24,13 +24,12 @@
 >	  tab + 2 dấu cách để bo như này ahahahah("ahahaha")
 
 
-Ví dụ ảnh
+<a name="dinhdanganh">##Ví dụ ảnh</a>
 [Link ảnh](https://imgur.com/IMwnYrc)
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
 
-<a href="#dinhdangtext">
-Định dạng văn bản</a>
+<a name="dinhdangtext">##Định dạng văn bản</a>
 
 *1 dấu sao để in nghiêng* </br>
 **2 dấu sao để in đậm** </br>
