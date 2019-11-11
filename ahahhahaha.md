@@ -28,8 +28,8 @@ Ví dụ ảnh
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
 
-*1 dấu sao để in nghiêng* < br />
-**2 dấu sao để in đậm**< br />
-`Bo khung chữ bằng dấu này ` < br />
+*1 dấu sao để in nghiêng* </br>
+**2 dấu sao để in đậm** </br>
+`Bo khung chữ bằng dấu này ` </br>
 
 ## 2019 Ngô Cát Tường
