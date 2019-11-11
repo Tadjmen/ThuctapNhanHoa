@@ -1,6 +1,6 @@
 # Tuong-em Repository #
 
-<table>
+<table with="100%">
     <tr>
         <td>Left</td>
 		<td>Center</td>
