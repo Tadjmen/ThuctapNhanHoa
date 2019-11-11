@@ -6,7 +6,6 @@
 		<td align="center">2</td>
 		<td align="right">3</td>
     </tr>
-	
 </table>
 
 
