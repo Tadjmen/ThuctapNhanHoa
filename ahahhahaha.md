@@ -6,7 +6,7 @@
 
 ahahahah
 ahahaha&copy;
-ahahahaha &copy;
+ahahahaha AT&amp;T
 
 ahahah AT&T
 
