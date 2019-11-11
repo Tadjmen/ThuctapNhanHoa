@@ -26,7 +26,7 @@
 
 <p>Here is an example of AppleScript:</p>
 
-<code>tell application "Foo"
+<pre><code>tell application "Foo"
     beep
 end tell
-</code>
+</code></pre>
