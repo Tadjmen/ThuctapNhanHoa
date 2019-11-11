@@ -3,12 +3,8 @@
 <table>
     <tr>
         <td>Left</td>
-    </tr>
-	<tr>
-        <td>Center</td>
-    </tr>
-	<tr>
-        <td>Right</td>
+		<td>Center</td>
+		<td>Right</td>
     </tr>
 </table>
 
