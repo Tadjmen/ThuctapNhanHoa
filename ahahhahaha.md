@@ -30,6 +30,6 @@ Bấm vào sẽ ra hình này
 
 *1 dấu sao để in nghiêng* </br>
 **2 dấu sao để in đậm** </br>
-`Bo khung chữ bằng dấu này ` </br>
+```Bo khung chữ bằng 3 phím dấu huyền ``` </br>
 
 ## 2019 Ngô Cát Tường
