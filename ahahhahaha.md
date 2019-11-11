@@ -32,6 +32,6 @@ end tell
 </code></pre>
 
 
-<pre>##<div class="footer" align="right">
+##<div class="footer" align="right">
         &copy; 2019 Ngô Cát Tường
-    </div> </pre>
+    </div>
