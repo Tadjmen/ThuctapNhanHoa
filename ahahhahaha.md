@@ -29,7 +29,8 @@
 Bấm vào sẽ ra hình này
 <img src="https://i.imgur.com/IMwnYrc.jpg">
 
-<a name="dinhdangtext">##Định dạng văn bản</a>
+<a name="dinhdangtext"></a>
+##Định dạng văn bản
 
 *1 dấu sao để in nghiêng* </br>
 **2 dấu sao để in đậm** </br>
