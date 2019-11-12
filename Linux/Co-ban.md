@@ -5,7 +5,7 @@
 [Lệnh nén và giải nén trong Linux ](#lenhnen)  
 ---
 <a name="lenhhethong"></a>
-##Lệnh liên quan đến hệ thống 
+## Lệnh liên quan đến hệ thống 
 - exit: thoát khỏi cửa sổ dòng lệnh.
 - reboot: khởi động lại hệ thống.
 - mount: gắn hệ thống tập tin từ một thiết bị lưu trữ vào cây thư mục chính.
@@ -22,7 +22,7 @@
 - top: Lệnh top khá giống như Task Manager trong Windows. 
 ---
 <a name="lenhtaptin"></a>
-##Lệnh thao tác trên tập tin 
+## Lệnh thao tác trên tập tin 
 - ls: lấy danh sách tất cả các file và thư mục trong thư mục hiện hành.
 - pwd: xuất đường dẫn của thư mục làm việc.
 - cd: thay đổi thư mục làm việc đến một thư mục mới.
@@ -36,7 +36,7 @@
 - vi: khởi động trình soạn thảo văn bản vi.
 ---
 <a name="lenhnen"></a>
-##Lệnh nén và giải nén trong Linux 
+## Lệnh nén và giải nén trong Linux 
 - tar -cvf:	Nén file/thư mục sang định dạng .tar
 - tar -xvf:	Giải nén file tar
 - gzip:	Chuyển file .tar sang .tar.gz
