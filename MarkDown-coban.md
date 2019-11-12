@@ -28,7 +28,7 @@
 <a name="dinhdanganh"></a>
 ## Ví dụ ảnh
 [Link ảnh](https://imgur.com/IMwnYrc)
-Bấm vào sẽ ra hình này
+Bấm vào sẽ ra hình này 
 <img src="https://i.imgur.com/IMwnYrc.jpg">
 
 <a name="dinhdangtext"></a>
