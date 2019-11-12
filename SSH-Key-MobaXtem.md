@@ -8,7 +8,7 @@ Nội dung giữa Private Key và Public Key hoàn toàn khác nhau, nhưng nó 
 - Private Key (dạng file và string) – Bạn sẽ lưu file này vào máy tính, sau đó sẽ thiết lập cho PuTTY, WinSCP, MobaXterm,..để có thể login.
 - Keypharse (dạng string, cần ghi nhớ) – Mật khẩu để mở private key, khi đăng nhập vào server nó sẽ hỏi cái này.
 Và một SSH Key có thể sử dụng cho nhiều server khác nhau.
-### Download MobaXtem
+### Download MobaXtem \
 Để tải MobaXtem click vào link [này](https://news.cloud365.vn/ssh-mobaxterm-huong-dan-su-dung-mobaxterm-de-ssh-vao-server-linux/)
 #### Bước 1: Click vào Tools > MobaKeyGen(SSH key generator)
 <img src="https://i.imgur.com/xoFGCw7.png">
