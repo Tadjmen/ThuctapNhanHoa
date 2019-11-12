@@ -1,8 +1,8 @@
 # Danh sách những lệnh command cơ bản trên Linux
 ---
-[Lệnh liên quan đến hệ thống ](#lenhhethong)
-[Lệnh thao tác trên tập tin ](#lenhtaptin)
-[Lệnh nén và giải nén trong Linux ](#lenhnen)
+[Lệnh liên quan đến hệ thống ](#lenhhethong)  
+[Lệnh thao tác trên tập tin ](#lenhtaptin)  
+[Lệnh nén và giải nén trong Linux ](#lenhnen)  
 ---
 <a name="lenhhethong"></a>
 ##Lệnh liên quan đến hệ thống 
