@@ -1,9 +1,9 @@
 # Danh sách những lệnh command cơ bản trên Linux
-----------------------------
+---
 [Lệnh liên quan đến hệ thống ](#lenhhethong)
 [Lệnh thao tác trên tập tin ](#lenhtaptin)
 [Lệnh nén và giải nén trong Linux ](#lenhnen)
----------------------
+---
 <a name="lenhhethong"></a>
 ##Lệnh liên quan đến hệ thống 
 - exit: thoát khỏi cửa sổ dòng lệnh.
@@ -20,7 +20,7 @@
 - su: cho phép đăng nhập với tư cách người dùng khác.
 - who: cho biết ai đang đăng nhập hệ thống.
 - top: Lệnh top khá giống như Task Manager trong Windows. 
------------------------------------------------
+---
 <a name="lenhtaptin"></a>
 ##Lệnh thao tác trên tập tin 
 - ls: lấy danh sách tất cả các file và thư mục trong thư mục hiện hành.
@@ -34,7 +34,7 @@
 - touch: tạo một tập tin.
 - cat: xem nội dung tập tin.
 - vi: khởi động trình soạn thảo văn bản vi.
---------------------------------
+---
 <a name="lenhnen"></a>
 ##Lệnh nén và giải nén trong Linux 
 - tar -cvf:	Nén file/thư mục sang định dạng .tar
