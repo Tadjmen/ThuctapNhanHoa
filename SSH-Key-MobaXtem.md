@@ -24,5 +24,7 @@ Copy nội dung File Public Key vào file authorized_keys tại địa chỉ /ro
 
 #### Bước 5: Tại cửa sổ kết nối SSH chọn mục Advanced SSH settings và chọn đến File Private Key để kết nối
 <img src="https://i.imgur.com/N0xJ0K1.png">
-Như VẬY LÀ XONG
+
+Khi kết nối nếu có Key Passphrase thì phải điền key Passphrase, nếu không sẽ được kết nối trực tiếp tới Sever.
+
 
