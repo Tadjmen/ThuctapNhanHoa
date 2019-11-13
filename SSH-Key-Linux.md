@@ -1,4 +1,4 @@
-# Hướng dẫn tạo SSH Key bằng MobaXtem
+# Hướng dẫn tạo SSH Key bằng Linux
 SSH Key bạn cứ hiểu đơn giản là một phương thức chứng thực người dùng truy cập bằng cách đối chiếu giữa một key cá nhân (Private Key) và key công khai(Public Key).
 Khi tạo một SSH Key sẽ có cả 2 loại key này. Sau đó ta mang cái public key bỏ lên máy chủ, còn cái private key sẽ lưu ở máy và khi đăng nhập vào server, ta sẽ gửi yêu cầu đăng nhập kèm theo cái Private Key này để gửi tín hiệu đến server, server sẽ kiểm tra xem cái Private key của bạn có khớp với Public key có trên server hay không, nếu có thì bạn sẽ đăng nhập được.
 Nội dung giữa Private Key và Public Key hoàn toàn khác nhau, nhưng nó vẫn sẽ nhận diện được với nhau thông qua một thuật toán riêng của nó, đó là so sánh cặp mã hóa.
