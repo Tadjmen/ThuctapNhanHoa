@@ -57,6 +57,8 @@ File nguồn và File đích có số inode khác nhau nên khi xóa File gốc 
 ## Tìm kiếm tập tin
 Để có được danh sách theo đúng ý, chúng ta có thể sử dụng grep làm bộ lọc. Nó sẽ chỉ in các dòng có chứa một hoặc nhiều chuỗi được chỉ định. Ví dụ:  
 <code>locate zip | grep bin</code>
+
+
 Tìm tại thư mục gốc sẽ ra kết quả như sau:   
 <pre><code>
 [root@localhost ~]# locate zip | grep bin
@@ -91,7 +93,9 @@ Tìm tại thư mục gốc sẽ ra kết quả như sau:
 **sẽ liệt kê tất cả các tệp và thư mục có cả "zip" và "bin" trong tên của chúng.**
 Lệnh <code>find</code> rất hữu ích và được sử dụng khá thường xuyên  
 
-<code>find /usr -name *.log</code>
+<code>find /usr -name *.log</code>  
+
+
 Sẽ ra kết quả như sau:   
 <pre><code>
 [root@localhost ~]# find /usr -name *.log
@@ -100,11 +104,17 @@ Sẽ ra kết quả như sau:
 </code></pre>
 
 Tìm kiếm tệp và thư mục có tên "vcc":  
-<code>find /usr -name vcc</code>
+<code>find /usr -name vcc</code>  
+
+
 Chỉ tìm kiếm các thư mục có tên "vcc":  
-<code>find /usr -type d -name gcc</code>
+<code>find /usr -type d -name gcc</code> 
+
+
 Chỉ tìm kiếm các tệp thông thường có tên "den":  
-<code>find /usr -type f -name den</code>
+<code>find /usr -type f -name den</code>  
+
+
  Ngoài ra có thể sử dụng để xóa hàng loạt, ví dụ xóa toàn bộ những bức ảnh có đuôi jpg trong thư mục hiện tại  
 <pre><code>
 find -name "*.jpg" -exec rm {} ’;’
@@ -112,7 +122,7 @@ find -name "*.jpg" -ok rm {} \;
 </code></pre>
 {} có tác dụng lệnh sẽ được điền bằng với tất cả các tên tệp xuất phát từ biểu thức tìm và lệnh trước sẽ được chạy trên từng dòng riêng. Lưu ý cần phải kết thúc câu lệnh bằng<code> ‘;’</code> hoặc <code>\;</code>
 
-Tìm kiếm dựa trên kích thước:
+Tìm kiếm dựa trên kích thước:  
 <code>find / -size +10M</code>
 
 Để tìm các tệp có kích thước lớn hơn 10 MB.
