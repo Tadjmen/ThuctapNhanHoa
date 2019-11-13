@@ -6,6 +6,7 @@
 5. [SSH sang máy Sever bằng Key đã thêm](#buoc3)
 
 <a name="ssh">
+
 # Giới thiệu SSH
 SSH là một giao thức mạng dùng để thiết lập kết nối mạng một cách bảo mật. SSH hoạt động ở lớp trên trong mô hình phân lớp TCP/IP. Các công cụ SSH (như là OpenSSH,...) cung cấp cho người dùng cách thức để thiết lập kết nối mạng được mã hoá để tạo một kênh kết nối riêng tư.
 # SSH Key là gì
