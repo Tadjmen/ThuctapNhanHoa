@@ -88,6 +88,7 @@ Tìm tại thư mục gốc sẽ ra kết quả như sau:
 /usr/lib/firmware/qed/qed_init_values_zipped-8.7.3.0.bin
 [root@localhost ~]#
 </code></pre>
+\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n
 
 **sẽ liệt kê tất cả các tệp và thư mục có cả "zip" và "bin" trong tên của chúng.**
 Lệnh <code>find</code> rất hữu ích và được sử dụng khá thường xuyên  
