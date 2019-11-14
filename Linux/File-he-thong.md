@@ -3,6 +3,16 @@ Hệ thống tập tin của Linux và Unix được tổ chức theo một hệ
 Dưới đây là cấu trúc thư mục trong Linux
 <img src="https://st.quantrimang.com/photos/image/2016/05/07/cau-truc-file-linux.png">
 
+1. [Hệ thống tập tin](#hethongtaptin)
+2. [Các thư mục nhị phân](#cacthumucnhiphan)
+3. [Thư mục thiết bị ](#thumucthietbi)
+4. [Thư mục Var](#thumucvar)
+5. [Thư mục cấu hình hệ thốngc](#thumuccauhinhhethong)
+6. [Thư mục khởi động](#thumuckhoidong)
+7. [Thư mục Lib](#thuvien)
+8. [Các thư mục khác](#thumuckhac)
+
+
 1. / – Root
 - Mở từng tập tin và thư mục từ thư mục Root.
 - Chỉ có Root user mới có quyền viết dưới thư mục này.
@@ -71,6 +81,8 @@ Dưới đây là cấu trúc thư mục trong Linux
 - Svr viết tắt của service.
 - Chứa các service của máy chủ cụ thể liên quan đến dữ liệu.
 
+<a name="hethongtaptin">
+
 ## Hệ thống tập tin
 ext3 , ext4 , btrfs , xfs (hệ thống tập tin Linux gốc)
 vfat , ntfs , hfs (hệ thống tập tin từ các hệ điều hành khác)
@@ -85,9 +97,11 @@ Lệnh `mount` được sử dụng để mount vào cây tập tin
 Các `umount` lệnh được sử dụng để tách các hệ thống tập tin từ các điểm gắn kết.
 
 `umount /mnt`
+<a name ="cacthumucnhiphan">
 
 ## Các thư mục nhị phân
 Thư mục /bin là thư mục chứa tập tin nhị phân thực thi, lệnh thiết yếu được sử dụng trong chế độ đơn người dùng, và các lệnh cần thiết theo yêu cầu của tất cả người dùng hệ thống, chẳng hạn như ps, ls, cp.  Các lệnh không cần thiết cho hệ thống ở chế độ một người dùng được đặt trong /usr/bin , trong khi /sbin được sử dụng cho các nhị phân thiết yếu liên quan đến quản trị hệ thống, chẳng hạn như `ifconfig` và `shutdown`. Ngoài ra còn có một thư mục /usr/sbin cho các chương trình quản trị hệ thống ít cần thiết hơn.
+<a name="thumucthietbi">
 
 ## Thư mục thiết bị  
 Thư mục `/dev` Chứa các tập tin để nhận biết cho các thiết bị của hệ thống, thư mục /dev chứa các mục như:
@@ -98,6 +112,7 @@ Thư mục `/dev` Chứa các tập tin để nhận biết cho các thiết b�
 /dev/dvd1
 ```
 </pre>
+<a name="thumucvar">
 
 ## Thư mục variable 
 Thư mục /varchứa các tệp dự kiến ​​sẽ thay đổi kích thước và nội dung khi hệ thống đang chạy (var là viết tắt của variable), chẳng hạn như các mục trong các thư mục sau:
@@ -108,9 +123,11 @@ Thư mục /varchứa các tệp dự kiến ​​sẽ thay đổi kích thư�
 - Thư mục nhà FTP: /var/ftp
 - Thư mục máy chủ web: /var/www  
 Thư mục /var có thể được đặt trong phân vùng riêng của nó để có thể điều chỉnh tăng trưởng của các tệp và kích thước tệp không ảnh hưởng nghiêm trọng đến hệ thống.
+<a name="thumuccauhinhhethong">
 
 ## Thư mục cấu hình hệ thống
 Thư mục /etc là thư mục chứa các tập tin cấu hình hệ thống. Nó không chứa các chương trình nhị phân, mặc dù có một số tập lệnh thực thi. Một số bản phân phối Linux mở rộng nội dung của ```/etc```. Ví dụ, **Red Hat** thêm ```/etc/sysconfig``` thư mục con chứa nhiều tệp cấu hình hơn.
+<a name="thumuckhoidong">
 
 ## Thư mục khởi động
 Thư mục `/boot` chứa một vài tệp cần thiết để khởi động hệ thống. Đối với mỗi **kernel** được cài đặt trên hệ thống, có bốn tệp:
@@ -118,9 +135,11 @@ Thư mục `/boot` chứa một vài tệp cần thiết để khởi động h�
 - `initramfs` là hệ thống tập tin ram ban đầu, cần thiết để khởi động
 - `config is` tập tin cấu hình kernel, chỉ được sử dụng để gỡ lỗi
 - `System.map` chứa bảng ký hiệu kernel, chỉ được sử dụng để gỡ lỗi
+<a name="thuvien">
 
 ## Thư mục thư viện
 Các `/lib` thư viện chứa (mã chung được chia sẻ bởi các ứng dụng và cần thiết để chúng chạy) chứa trong `/bin` và `/sbin` . Trên một số bản phân phối Linux tồn tại một thư mục `/lib64` chứa các thư viện 64 bit, trong khi `/lib` có các phiên bản 32 bit. Các mô-đun hạt nhân (mã hạt nhân, thường là trình điều khiển thiết bị, có thể được tải và tải mà không cần khởi động lại hệ thống) được đặt trong `/lib/modules/`.
+<a name="thumuckhac">
 
 ## Các thư mục khác
 |Thư mục|Có chứa|
