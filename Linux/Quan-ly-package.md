@@ -1,4 +1,4 @@
-# Hệ thống các gói quản lý
+# Hệ thống quản lý các package
 
 Các phần cốt lõi của các bản phân phối Linux và hầu hết các phần mềm của nó được cài đặt thông qua `Package Management System`. Mỗi gói chứa các tệp và các hướng dẫn khác cần thiết để làm cho một thành phần phần mềm hoạt động trên hệ thống. Các gói có thể phụ thuộc lẫn nhau. Có hai lựa chọn quản lý gói: dpkg và rpm, hai hệ thống không tương thích, nhưng cung cấp các tính năng giống nhau ở mức độ rộng rãi.
 
