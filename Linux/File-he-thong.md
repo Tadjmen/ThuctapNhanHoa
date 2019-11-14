@@ -11,7 +11,7 @@ Dưới đây là cấu trúc thư mục trong Linux
 6. [Thư mục khởi động](#thumuckhoidong)
 7. [Thư mục Lib](#thuvien)
 8. [Các thư mục khác](#thumuckhac)
-
+----------------------------------------------------------
 
 1. / – Root
 - Mở từng tập tin và thư mục từ thư mục Root.
