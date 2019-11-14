@@ -12,13 +12,14 @@ Các lệnh nén thường dùng: `gzip`, `bzip2`, `xz`, `zip`.
 
 ## Lưu trữ dữ liệu
 Lệnh `tar` có tác dụng giải nén các File nén. Dưới đây là một số ví dụ về việc sử dụng tar:
+
 |Lệnh|Dùng trong|
 |---|---|
 |tar xvf mydir.tar|Giải nén tất cả các tệp trong mydir.tar vào thư mục mydir|
 |tar zcvf mydir.tar.gz mydir|Nén thư mục mydir với gzip|
 |tar jcvf mydir.tar.bz2 mydir|Nén thư mục mydir với bz2|
 |tar xvf mydir.tar.gz|Giải nén tất cả các tệp trong mydir.tar.gz vào thư mục mydir|
-|tar cvf mydir.tar||
+|tar cvf mydir.tar|
 
 ## Sao chép ổ đĩa
 Ví dụ: 
