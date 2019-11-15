@@ -57,16 +57,16 @@ Mở File `/etc/fstab` và thêm vào cuối dòng sau
 giá trị Swappiness từ 0 - 100, giá trị mặc định ở thiết bị của mình là 30, chỉ số này càng thấp thì máy Linux sẽ càng tránh sử dụng Swap file này, giá trị càng cao thì máy tính càng ưu tiên sử dụng, chúng ta có thể thay đổi giá trị này tại:
 ```/proc/sys/vm/swappiness```
 
-```[root@localhost ~]# cat /proc/sys/vm/swappiness
+<pre>[root@localhost ~]# cat /proc/sys/vm/swappiness
 30
-[root@localhost ~]#```
+[root@localhost ~]#</pre>
 
 ## Xóa Swap File
 Để xóa File swap có thể Deactive swap File:
 `sudo swapoff -v /swapfile` 
 
 Xóa dòng khai báo swap
-`/swapfile swap swap defaults 0 0` tại file /etc/fstab .
+`/swapfile swap swap defaults 0 0` tại file `/etc/fstab` .
 
 Cuối cùng để Xóa ta dùng lệnh rm
 `sudo rm /swapfile`
