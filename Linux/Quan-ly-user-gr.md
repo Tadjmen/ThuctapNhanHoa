@@ -9,8 +9,7 @@ Có 4 file chính quản lý người sử dụng:
 1. `/etc/passwd`: Giữ tài khoản người dùng và thông tin mật khẩu. File này giữ các thông tin quan trọng về các tài khoản trên hệ thống Unix.
 2. `/etc/shadow`: Giữ mật khẩu được biên thành mật mã của tài khoản tương ứng. Không phải tất cả các hệ thống đều hỗ trợ file này.
 3. `/etc/group`: File này giữ thông tin nhóm cho mỗi tài khoản.
-4. `/etc/gshadow`: File này giữ các thông tin tài khoản nhóm bảo mật.
-Chúng ta có thể dùng lệnh `Cat` để kiểm tra những File này.
+
 
 ## Các lệnh trong Linux để quản lý các tài khoản cá nhân và nhóm.
 |Lệnh|Miêu tả|
@@ -21,6 +20,7 @@ Chúng ta có thể dùng lệnh `Cat` để kiểm tra những File này.
 |groupadd|Thêm tài khoản Group mới|
 |groupmod|Chỉnh sửa thuộc tính Group|
 |groupdel|Xóa tài khoản Group|
+|passwd username|Đổi mật khẩu User|
 
 ## Tạo một nhóm trong Linux
 Cú pháp tạo nhóm mới trong Linux\
@@ -104,3 +104,5 @@ drwx------.  2 tuongem tuongem  62 Nov 15 18:14 tuongem
 
 ```
 
+Kiểm tra đăng nhập User mới tạo thành công
+<img src="https://i.imgur.com/tq62R7Z.png">
