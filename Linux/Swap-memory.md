@@ -14,7 +14,7 @@ Swap Memory được sử dụng khi hệ thống của bạn quyết định r�
 Lưu ý rằng thời gian truy cập vào vùng Swap là chậm hơn rất nhiều, do đó bạn không nên coi việc sử dụng Swap là một phương pháp thay thế cho (RAM).
 
 ## Lúc nào thì cần tới Swap memory
-**Tối ưu hóa bộ nhớ** – Hệ thống sẽ di chuyển các tài nguyên và dữ liệu hiện không được sử dụng trong bộ nhớ RAM đến Swap, điều này giúp hệ thống phục vụ cho các mục đích khác tốt hơn.
+**Tối ưu hóa bộ nhớ** Hệ thống sẽ di chuyển các tài nguyên và dữ liệu hiện không được sử dụng trong bộ nhớ RAM đến Swap, điều này giúp hệ thống phục vụ cho các mục đích khác tốt hơn.\
 **Tránh các trường hợp không lường trước**  Trong một số trường hợp, bạn không dự tính được bộ nhớ dành cho các chương trình mà bạn chuẩn bị thử nghiệm, hoặc một chương trình bất kỳ nào đó nổi điên lên, hoặc bất cứ điều gì đó bất thường
 
 Linux Swap có hai dạng: phân vùng & File. Để xem nó nằm ở đâu, hãy sử dụng lệnh `swapon` .
@@ -25,9 +25,9 @@ Filename                                Type            Size    Used    Priority
 [root@localhost /]#
 ```
 Tạo file sẽ dùng làm file Swap, tùy biến dung lượng tại `1G`
-`sudo fallocate -l 1G /swapfile`
+`sudo fallocate -l 1G /swapfile`\
 Tạo Swap File
-`sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`
+`sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`\
 
 <pre>`[root@localhost aaaha]# sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 1048576+0 records in
@@ -38,15 +38,15 @@ Phân quyền cho file vừa tạo
 `sudo chmod 600 /swapfile`
 
 ## Cài đặt vùng Swap
-Sử dụng `mkswap` để thiết lập file là file swap
-```sudo mkswap /swapfile```
+Sử dụng `mkswap` để thiết lập file là file swap\
+```sudo mkswap /swapfile```\
 ```[root@localhost aaaha]# sudo mkswap /swapfile
 Setting up swapspace version 1, size = 1048572 KiB
 no label, UUID=07146ec9-aab1-4f81-af78-837d7d19b5b9
 ```
 
 Khởi động swap File bằng lệnh sau
-```sudo swapon /swapfile```
+```sudo swapon /swapfile```\
 Mở File `/etc/fstab` và thêm vào cuối dòng sau
 `/swapfile swap swap defaults 0 0`
 
