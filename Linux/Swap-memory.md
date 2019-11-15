@@ -25,12 +25,12 @@ Filename                                Type            Size    Used    Priority
 Tạo file sẽ dùng làm file Swap, tùy biến dung lượng tại `1G`
 `sudo fallocate -l 1G /swapfile`
 Tạo Swap File
-`sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`\
+`sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`
 
-<pre>`[root@localhost aaaha]# sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+<pre>[root@localhost aaaha]# sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 1048576+0 records in
 1048576+0 records out
-1073741824 bytes (1.1 GB) copied, 16.7704 s, 64.0 MB/s`</pre>
+1073741824 bytes (1.1 GB) copied, 16.7704 s, 64.0 MB/s</pre>
 
 Phân quyền cho file vừa tạo
 `sudo chmod 600 /swapfile`
