@@ -1,5 +1,5 @@
 # Backup dữ liệu
-
+ 
 Lệnh `rsync` được sử dụng để đồng bộ hóa toàn bộ cây thư mục. Về cơ bản, nó sao chép tập tin như lệnh `cp`. Ngoài ra, `rsync` kiểm tra xem tệp đã được sao chép chưa. Nếu tệp tồn tại và không có thay đổi về kích thước hoặc thời gian sửa đổi, `rsync` sẽ tránh một bản sao không cần thiết và tiết kiệm thời gian. Hơn nữa, vì rsync chỉ sao chép các phần của tệp đã thực sự thay đổi, nên nó có thể rất nhanh.
 
 `Rsync` rất hiệu quả khi sao chép đệ quy một cây thư mục qua mạng, vì chỉ những phần khác nhau được truyền đi.
