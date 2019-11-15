@@ -23,7 +23,7 @@ Filename                                Type            Size    Used    Priority
 [root@localhost /]#
 ```
 Tạo file sẽ dùng làm file Swap, tùy biến dung lượng tại `1G`
-`sudo fallocate -l 1G /swapfile`\
+`sudo fallocate -l 1G /swapfile`
 Tạo Swap File
 `sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`\
 
