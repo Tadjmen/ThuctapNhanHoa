@@ -62,11 +62,11 @@ giá trị Swappiness từ 0 - 100, giá trị mặc định ở thiết bị c�
 [root@localhost ~]#</pre>
 
 ## Xóa Swap File
-Để xóa File swap có thể Deactive swap File:
+Để xóa File swap có thể Deactive swap File:\
 `sudo swapoff -v /swapfile` 
 
-Xóa dòng khai báo swap
+Xóa dòng khai báo swap\
 `/swapfile swap swap defaults 0 0` tại file `/etc/fstab` .
 
-Cuối cùng để Xóa ta dùng lệnh rm
+Cuối cùng để Xóa ta dùng lệnh rm\
 `sudo rm /swapfile`
