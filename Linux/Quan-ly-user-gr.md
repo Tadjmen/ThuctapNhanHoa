@@ -32,16 +32,20 @@ Các tham số
 |-g GID|Giá trị ID|
 |groupname|Tên Group|
 
-Tạo nhóm Dev2:\
-`groupadd dev2`
-## Chỉnh sửa một nhóm trong Unix/Linux
-Để thay đổi tên nhóm dev2 thành dev, bạn gõ như sau:
-`groupmod -n dev dev2`\
-Đổi ID Group
-`groupmod -g 444 dev`\
-Kiểm tra xem nhóm đã được tạo thành công hay chưa\
+## Tạo một User trong Linux
+Tạo User trong Linux với tên tuongem và đặt mật khẩu
 
-<pre>[root@localhost etc]# cat group
+<pre>[root@localhost ~]# useradd tuongem
+[root@localhost ~]# passwd tuongem
+Changing password for user tuongem.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+</pre>
+Khi tạo User mới thì User sẽ được đặt vào Group `cùng tên`
+
+```
+[root@localhost ~]# cat /etc/group
 root:x:0:
 bin:x:1:
 daemon:x:2:
@@ -88,11 +92,15 @@ tcpdump:x:72:
 stapusr:x:156:
 stapsys:x:157:
 stapdev:x:158:
-**dev:x:444:**
-[root@localhost etc]#
+tuongem:x:1000:
+[root@localhost ~]# cd /home
+[root@localhost home]# ls -la
+total 0
+drwxr-xr-x.  4 root    root     33 Nov 15 18:14 .
+dr-xr-xr-x. 18 root    root    251 Nov 15 07:07 ..
+drwx------.  2 tuongem     444  62 Nov 15 10:33 bobb
+drwx------.  2 tuongem tuongem  62 Nov 15 18:14 tuongem
+[root@localhost home]#
 
-</pre>
+```
 
-## Xóa một nhóm trong Unix/Linux
-`groupdel dev`\
-Lệnh này chỉ gỡ bỏ nhóm, không phải bất kỳ file nào liên quan tới nhóm. Nên những File của nhóm vẫn còn trong thư mục home
