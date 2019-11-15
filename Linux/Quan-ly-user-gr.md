@@ -40,7 +40,7 @@ Tạo nhóm Dev2 `groupadd dev2`\
 
 Kiểm tra xem nhóm đã được tạo thành công hay chưa\
 
-<pre>```[root@localhost etc]# cat group
+<pre>[root@localhost etc]# cat group
 root:x:0:
 bin:x:1:
 daemon:x:2:
@@ -89,7 +89,7 @@ stapsys:x:157:
 stapdev:x:158:
 **dev:x:444:**
 [root@localhost etc]#
-```
+
 </pre>
 
 ## Xóa một nhóm trong Unix/Linux
