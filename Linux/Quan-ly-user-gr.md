@@ -32,7 +32,7 @@ Các tham số
 |-g GID|Giá trị ID|
 |groupname|Tên Group|
 
-Tạo nhóm Dev2:
+Tạo nhóm Dev2:\
 `groupadd dev2`
 ## Chỉnh sửa một nhóm trong Unix/Linux
 Để thay đổi tên nhóm dev2 thành dev, bạn gõ như sau:
