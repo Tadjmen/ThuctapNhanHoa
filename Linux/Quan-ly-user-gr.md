@@ -1,5 +1,5 @@
 # Quản lý user trong Unix/Linux
-Có 3 kiểu tài khoản trên một hệ thống Unix:\
+Có 3 kiểu tài khoản trên một hệ thống Unix:
 - Tài khoản gốc (Root account): Là tài khoản Super User có toàn quyền trên hệ thống. Có thể chạy bất cứ lệnh nào mong muốn
 - Các tài khoản hệ thống: Các tài khoản hệ thống được tạo sẵn để phục vụ các hoạt động riêng rẽ trên hệ thống, sửa đổi thông tin các User này có thể gây ra lỗi đối với toàn hệ thống.
 - Các tài khoản người dùng cá nhân: Tài khoản này được cung cấp những tính năng mang tính tương đối trong hệ thống, bị giới hạn truy cập vào những vùng quan trọng.
@@ -26,18 +26,18 @@ Chúng ta có thể dùng lệnh `Cat` để kiểm tra những File này.
 Cú pháp tạo nhóm mới trong Linux\
 `groupadd [-g gid] groupname`\
 Các tham số
+
 |Tùy chọn|Miêu tả|
 |---|---|
 |-g GID|Giá trị ID|
 |groupname|Tên Group|
 
-Tạo nhóm Dev2 `groupadd dev2`\
+Tạo nhóm Dev2 `groupadd dev2`
 ## Chỉnh sửa một nhóm trong Unix/Linux
-Để thay đổi tên nhóm dev2 thành dev, bạn gõ như sau:\
-`groupmod -n dev dev2`
+Để thay đổi tên nhóm dev2 thành dev, bạn gõ như sau:
+`groupmod -n dev dev2`\
 Đổi ID Group
 `groupmod -g 444 dev`\
-
 Kiểm tra xem nhóm đã được tạo thành công hay chưa\
 
 <pre>[root@localhost etc]# cat group
