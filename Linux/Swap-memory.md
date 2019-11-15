@@ -1,11 +1,9 @@
 # Swap memory trong Linux
 
-[Swap memory là gì](#swap-memory-là-gì)
-[Lúc nào thì cần tới Swap memory](#lúc-nào-thì-cần-tới-swap-memory)
-[Cài đặt vùng Swap](#cài-đặt-vùng-swap)
-[Giá trị Swappiness](#giá-trị-swappiness)
-
-
+1. [Swap memory là gì](#swap-memory-là-gì)
+2. [Lúc nào thì cần tới Swap memory](#lúc-nào-thì-cần-tới-swap-memory)
+3. [Cài đặt vùng Swap](#cài-đặt-vùng-swap)
+4. [Giá trị Swappiness](#giá-trị-swappiness)
 
 ## Swap memory là gì
 
