@@ -1,5 +1,12 @@
 # Swap memory trong Linux
 
+[Swap memory là gì](#swap-memory-là-gì)
+[Lúc nào thì cần tới Swap memory](#lúc-nào-thì-cần-tới-swap-memory)
+[Cài đặt vùng Swap](#cài-đặt-vùng-swap)
+[Giá trị Swappiness](#giá-trị-swappiness)
+
+
+
 ## Swap memory là gì
 
 Swap Memory được sử dụng khi hệ thống của bạn quyết định rằng nó cần thêm bộ nhớ RAM cho quá trình hoạt động và bộ nhớ RAM hiện tại không còn đủ để sử dụng. Nếu điều đó xãy ra, các tài nguyên và dữ liệu tạm thời không hoạt động trên bộ nhớ RAM sẽ được di chuyển để lưu trữ vào không gian Swap để giải phóng bộ nhớ RAM và sử dụng cho việc khác.
@@ -8,7 +15,7 @@ Lưu ý rằng thời gian truy cập vào vùng Swap là chậm hơn rất nhi�
 
 ## Lúc nào thì cần tới Swap memory
 **Tối ưu hóa bộ nhớ** – Hệ thống sẽ di chuyển các tài nguyên và dữ liệu hiện không được sử dụng trong bộ nhớ RAM đến Swap, điều này giúp hệ thống phục vụ cho các mục đích khác tốt hơn.
-**Tránh các trường hợp không lường trước** – Trong một số trường hợp, bạn không dự tính được bộ nhớ dành cho các chương trình mà bạn chuẩn bị thử nghiệm, hoặc một chương trình bất kỳ nào đó nổi điên lên, hoặc bất cứ điều gì đó bất thường
+**Tránh các trường hợp không lường trước**  Trong một số trường hợp, bạn không dự tính được bộ nhớ dành cho các chương trình mà bạn chuẩn bị thử nghiệm, hoặc một chương trình bất kỳ nào đó nổi điên lên, hoặc bất cứ điều gì đó bất thường
 
 Linux Swap có hai dạng: phân vùng & File. Để xem nó nằm ở đâu, hãy sử dụng lệnh `swapon` .
 
@@ -48,7 +55,7 @@ Mở File `/etc/fstab` và thêm vào cuối dòng sau
 
 ## Giá trị Swappiness
 giá trị Swappiness từ 0 - 100, giá trị mặc định ở thiết bị của mình là 30, chỉ số này càng thấp thì máy Linux sẽ càng tránh sử dụng Swap file này, giá trị càng cao thì máy tính càng ưu tiên sử dụng, chúng ta có thể thay đổi giá trị này tại:
-`/proc/sys/vm/swappiness`
+```/proc/sys/vm/swappiness```
 
 ```[root@localhost ~]# cat /proc/sys/vm/swappiness
 30
