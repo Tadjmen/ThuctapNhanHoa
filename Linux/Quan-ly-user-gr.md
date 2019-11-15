@@ -5,7 +5,7 @@ Có 3 kiểu tài khoản trên một hệ thống Unix:
 - Các tài khoản người dùng cá nhân: Tài khoản này được cung cấp những tính năng mang tính tương đối trong hệ thống, bị giới hạn truy cập vào những vùng quan trọng.
 
 ## Các tài khoản người dùng cá nhân
-Có 4 file chính quản lý người sử dụng:
+Có các file chính quản lý người sử dụng sau:
 1. `/etc/passwd`: Giữ tài khoản người dùng và thông tin mật khẩu. File này giữ các thông tin quan trọng về các tài khoản trên hệ thống Unix.
 2. `/etc/shadow`: Giữ mật khẩu được biên thành mật mã của tài khoản tương ứng. Không phải tất cả các hệ thống đều hỗ trợ file này.
 3. `/etc/group`: File này giữ thông tin nhóm cho mỗi tài khoản.
