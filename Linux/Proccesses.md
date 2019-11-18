@@ -1,5 +1,5 @@
 # Giới thiệu về Unix process
-Để làm việc trên Unix, chúng ta tương tác với hệ điều hành thông qua các lệnh (command). Mỗi lệnh trên Unix khi thực thi sẽ run một process hoặc một group các processes.
+Để làm việc trên Unix, chúng ta tương tác với hệ điều hành thông qua các lệnh (command). Mỗi lệnh trên Unix khi thực thi sẽ run một process hoặc một group các processes. 
 
 ## Tổng quan
 Tất cả các chương trình trong Unix thực chất đều là các processes. terminal bạn chạy, vim, hay bất cứ lệnh nào bạn gõ vào terminal. Process chính là đơn vị cấu thành nên Unix. Nói cách khác mỗi dòng code của bạn, sẽ được thực thi trên một process.
