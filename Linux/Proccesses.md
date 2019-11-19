@@ -58,7 +58,7 @@ KiB Swap:  3145720 total,  3145720 free,        0 used.   655476 avail Mem
 Dòng đầu tiên của `top` hiển thị một bản tóm tắt nhanh chóng về những gì đang xảy ra trong hệ thống :
 - Hệ thống đã hoạt động được bao lâu rồi
 - Có bao nhiêu người dùng đang đăng nhập
-- Trung bình tải 
+- Trung bình tải  
 Dòng thứ hai của `top` đầu ra hiển thị tổng số quá trình, số lượng quá trình chạy, ngủ, dừng và zombie. Nhằm đánh giá xem hệ thống có đang hoạt động hiệu quả hay không. 
 
 
@@ -84,3 +84,18 @@ Làm sao một process có thể sinh ra các process khác. Linux cung cấp m�
 
 Tức là thế này, khi fork một process mới, bộ nhớ của process con và process cha vẫn là độc lập, nhưng hệ điều hành sẽ sử dụng cơ chế copy-on-wright (COW) để thực hiện việc đó. Tức là nếu process con không thay đổi các giá trị trong process cha, process con và process cha sẽ vẫn dùng chung bộ nhớ. Điều này làm cho các process con chỉ đọc, sẽ có memory rất nhỏ. Hay nói cách khác, UNIX cung cấp cho chúng ta một công cụ để chạy các multiprogram với một lượng resource vửa đủ.
 
+## Delaying processes
+Đôi khi có những lệnh hay công việc bị trì hoãn hoặc đình chỉ, lệnh ngủ có thể được thực thi để đợi đến quãng thời gian chỉ định, đơn vị mặc định là giây.
+
+```
+# touch script.sh
+# vi script.sh
+!
+echo "The system will go to sleep fo 5 seconds ..."
+sleep 5
+echo "The system is awaked"
+# chmod u+x script.sh
+# ./script.sh
+The system will go to sleep fo 5 seconds ...
+The system is awaked
+```
