@@ -59,6 +59,7 @@ Dòng đầu tiên của `top` hiển thị một bản tóm tắt nhanh chóng 
 - Hệ thống đã hoạt động được bao lâu rồi
 - Có bao nhiêu người dùng đang đăng nhập
 - Trung bình tải  
+
 Dòng thứ hai của `top` đầu ra hiển thị tổng số quá trình, số lượng quá trình chạy, ngủ, dừng và zombie. Nhằm đánh giá xem hệ thống có đang hoạt động hiệu quả hay không. 
 
 
