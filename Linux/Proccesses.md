@@ -6,7 +6,7 @@ Tất cả các chương trình trong Unix thực chất đều là các process
 
 Unix cung cấp tool `ps` để list ra tất cả các process đang chạy trên hệ thống:
 
-Mình chạy lênh ps và show ra các thuộc tính `pid,ppid,user,rss,command` của process:
+Mình chạy lênh ps và show ra các thuộc tính `opid,ppid,user,rss,command` của process:
 ```
 ps -e -opid,ppid,user,rss,command
 ```
@@ -55,6 +55,13 @@ KiB Swap:  3145720 total,  3145720 free,        0 used.   655476 avail Mem
     37 root      39  19       0      0      0 S   0.0  0.0   0:00.09 khugepaged
     38 root       0 -20       0      0      0 S   0.0  0.0   0:00.00 crypto
 ```
+Dòng đầu tiên của `top` hiển thị một bản tóm tắt nhanh chóng về những gì đang xảy ra trong hệ thống :
+- Hệ thống đã hoạt động được bao lâu rồi
+- Có bao nhiêu người dùng đang đăng nhập
+- Trung bình tải 
+Dòng thứ hai của `top` đầu ra hiển thị tổng số quá trình, số lượng quá trình chạy, ngủ, dừng và zombie. Nhằm đánh giá xem hệ thống có đang hoạt động hiệu quả hay không. 
+
+
 Ngoài ra lệnh ps cũng cho chúng ta thấy, mỗi một Process sẽ có một Process ID, và thuộc về một Process cha nào đó. Process ID là duy nhất đối với mỗi một process, tức là 2 process khác nhau chắc chắn phải có PID khác nhau. Ngoài ra Process ID là không thể thay đổi trong khi chạy process.
 
 ### Kill Process
