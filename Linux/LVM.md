@@ -4,11 +4,11 @@ Về cơ bản, để sử dụng LVM cần nắm được:
 - Volume groups: là một nhóm bao gồm các Physical volumes. Có thể xem Volume group như 1 “ổ đĩa ảo”.
 - Logical volumes: có thể xem như là các “phân vùng ảo” trên “ổ đĩa ảo” bạn có thể thêm vào, gỡ bỏ và thay đổi kích thước một cách nhanh chóng.
 
-[Ưu nhược điểm](#ưu-điểm)
-[Tạo vào quản lý Logical Volume Manager](#tạo-vào-quản-lý-logical-volume-manager)
-[Thay đổi dung lượng Logical Volume](#thay-đổi-dung-lượng-logical-volume)
-[Thay đổi dung lượng Volume Group](#thay-đổi-dung-lượng-volume-group)
-[Xóa Logical Volume, Volume Group, Physical Volume](#xóa-logical-volume-volume-group-physical-volume)
+1. [Ưu nhược điểm](#ưu-điểm)
+2. [Tạo vào quản lý Logical Volume Manager](#tạo-vào-quản-lý-logical-volume-manager)
+3. [Thay đổi dung lượng Logical Volume](#thay-đổi-dung-lượng-logical-volume)
+4. [Thay đổi dung lượng Volume Group](#thay-đổi-dung-lượng-volume-group)
+5. [Xóa Logical Volume, Volume Group, Physical Volume](#xóa-logical-volume-volume-group-physical-volume)
 
 
 ## Ưu điểm
