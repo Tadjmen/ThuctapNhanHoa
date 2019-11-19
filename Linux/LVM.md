@@ -24,11 +24,11 @@ Về cơ bản, để sử dụng LVM cần nắm được:
 
 ## Tạo vào quản lý Logical Volume Manager
 Tạo physical Volume  
-`pvcreate /dev/sdb`
+`pvcreate /dev/sdb`  
 Tạo volume group  
-`vgcreate new_vol_group /dev/sdb`
+`vgcreate new_vol_group /dev/sdb`  
 Tạo Logical Volume 3G lấy từ group vừa tạo  
-`lvcreate -L 3G -n new_logical_volume new_vol_group`
+`lvcreate -L 3G -n new_logical_volume new_vol_group`  
 
 <img src="https://i.imgur.com/5tYmOIy.png">
 
