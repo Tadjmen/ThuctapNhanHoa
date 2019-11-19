@@ -153,6 +153,7 @@ Sau đó kiểm tra lại thu được kết quả như sau
 
 Trước tiên cần kiểm tra lại các partition và Volume Group bằng lệnh `gs` và `lsblk`
 <img src="https://i.imgur.com/9NaMaMn.png">
+
 Thêm 1 partition vào Volume Group tên "new_vol_group" như sau:
 
 `vgextend /dev/new_vol_group /dev/sdc`
