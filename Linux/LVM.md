@@ -181,8 +181,8 @@ umount /dev/new_vol_group/new_logical_volume
 lvremove /dev/new_vol_group/new_logical_volume
 ```
 
-Xóa Logical Volume Group
+Xóa Logical Volume Group  
 `vgremove /dev/new_vol_group`
 
-Xóa Physical Volume 
+Xóa Physical Volume  
 `pvremove /dev/sdd`
