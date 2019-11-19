@@ -23,21 +23,21 @@ Về cơ bản, để sử dụng LVM cần nắm được:
 - Windows không thể nhận ra vùng dữ liệu của LVM. Nếu bạn Dual-boot Windows sẽ không thể truy cập dữ liệu chứa trong LVM.
 
 ## Tạo vào quản lý Logical Volume Manager
-Tạo physical Volume
+Tạo physical Volume  
 `pvcreate /dev/sdb`
-Tạo volume group
+Tạo volume group  
 `vgcreate new_vol_group /dev/sdb`
-Tạo Logical Volume 3G lấy từ group vừa tạo
+Tạo Logical Volume 3G lấy từ group vừa tạo  
 `lvcreate -L 3G -n new_logical_volume new_vol_group`
 
 <img src="https://i.imgur.com/5tYmOIy.png">
 
 Sau đó có thể dùng lệnh `lvdisplay` để kiểm tra, và đây là kết quả
 
-<img src="https://i.imgur.com/OoikiL4.png">
+<img src="https://i.imgur.com/OoikiL4.png">  
 Đã tạo thành công Logical Volume với dung lượng 3GB
 
-Formmat thành định dạng `ext4` 
+Formmat thành định dạng `ext4`  
 `mkfs.ext4 /dev/new_vol_group/new_logical_volume`
 
 ```
@@ -65,8 +65,8 @@ Writing superblocks and filesystem accounting information: done
 ```
 
 ## Mount Logical Volume để sử dụng
-`mkdir /var/diasd`
-Tạo thư mục diasd
+`mkdir /var/diasd`  
+Tạo thư mục diasd  
 `mount /dev/new_vol_group/new_logical_volume /var/diasd`
 
 <img src="https://i.imgur.com/VzbMCzm.png">
@@ -75,7 +75,7 @@ Kiểm tra lại dung lượng của thư mục đã được mount bằng lện
 
 ##  Thay đổi dung lượng Logical Volume
 Trước hết phải kiểm tra Volume groups xem bộ nhớ có còn đủ để chia không bằng cách sử dụng lệnh `vgdisplay`
-<img src="https://i.imgur.com/2Xq5t37.png">
+<img src="https://i.imgur.com/2Xq5t37.png">  
 Có thể thấy là bộ nhớ khả dụng của Volume groups mới tạo còn khoảng dưới 2G.
 
 **Tăng** kích thước Logical Volume lên thêm `1GB`
@@ -97,7 +97,7 @@ Kiểm tra lại bằng cách dùng lệnh `lvs`
 [root@centos_client var]#
 ```
 
-Sau khi tăng kích thước cho Logical Volume thì Logical Volume đã được tăng nhưng file system trên volume này vẫn chưa thay đổi, bạn phải sử dụng lệnh sau để thay đổi:
+Sau khi tăng kích thước cho Logical Volume thì Logical Volume đã được tăng nhưng file system trên volume này vẫn chưa thay đổi, bạn phải sử dụng lệnh sau để thay đổi:  
 `resize2fs /dev/new_vol_group/new_logical_volume`
 ```
 [root@centos_client var]# resize2fs /dev/new_vol_group/new_logical_volume
@@ -107,10 +107,10 @@ old_desc_blocks = 1, new_desc_blocks = 1
 The filesystem on /dev/new_vol_group/new_logical_volume is now 1048576 blocks long.
 ```
 
-**Giảm** kích thước của Logical Volume đi `2GB`
-Đầu tiên ta cần unmount Logical Volume mà mình muốn giảm để đảm bảo an toàn dữ liệu.
-`umount /dev/new_vol_group/new_logical_volume`
-Sau đó thực hiện giảm kích thước Logical Volume
+**Giảm** kích thước của Logical Volume đi `2GB`  
+Đầu tiên ta cần unmount Logical Volume mà mình muốn giảm để đảm bảo an toàn dữ liệu.  
+`umount /dev/new_vol_group/new_logical_volume`  
+Sau đó thực hiện giảm kích thước Logical Volume  
 `lvreduce -L 2G /dev/new_vol_group/new_logical_volume`
 
 ```
@@ -150,15 +150,15 @@ Writing superblocks and filesystem accounting information: done
 [root@centos_client var]#
 ```
 
-Cuối cùng Mount lại Logical Volume
+Cuối cùng Mount lại Logical Volume  
 `mount /dev/new_vol_group/new_logical_volume /var/diasd`
 
-Sau đó kiểm tra lại thu được kết quả như sau
+Sau đó kiểm tra lại thu được kết quả như sau  
 <img src="https://i.imgur.com/O4ql0mm.png">
 
 ## Thay đổi dung lượng Volume Group
 
-Trước tiên cần kiểm tra lại các partition và Volume Group bằng lệnh `gs` và `lsblk`
+Trước tiên cần kiểm tra lại các partition và Volume Group bằng lệnh `gs` và `lsblk`  
 <img src="https://i.imgur.com/9NaMaMn.png">
 
 Thêm 1 partition vào Volume Group tên "new_vol_group" như sau:
