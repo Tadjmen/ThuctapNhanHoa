@@ -1,8 +1,4 @@
 #  Logical Volume Manager trong Linux
-Về cơ bản, để sử dụng LVM cần nắm được:
-- Physical volumes: là những đĩa cứng vật lý hoặc phân vùng trên nó .
-- Volume groups: là một nhóm bao gồm các Physical volumes. Có thể xem Volume group như 1 “ổ đĩa ảo”.
-- Logical volumes: có thể xem như là các “phân vùng ảo” trên “ổ đĩa ảo” bạn có thể thêm vào, gỡ bỏ và thay đổi kích thước một cách nhanh chóng.
 
 1. [Ưu nhược điểm](#ưu-điểm)
 2. [Tạo vào quản lý Logical Volume Manager](#tạo-vào-quản-lý-logical-volume-manager)
@@ -10,6 +6,10 @@ Về cơ bản, để sử dụng LVM cần nắm được:
 4. [Thay đổi dung lượng Volume Group](#thay-đổi-dung-lượng-volume-group)
 5. [Xóa Logical Volume, Volume Group, Physical Volume](#xóa-logical-volume-volume-group-physical-volume)
 
+Về cơ bản, để sử dụng LVM cần nắm được:
+- Physical volumes: là những đĩa cứng vật lý hoặc phân vùng trên nó .
+- Volume groups: là một nhóm bao gồm các Physical volumes. Có thể xem Volume group như 1 “ổ đĩa ảo”.
+- Logical volumes: có thể xem như là các “phân vùng ảo” trên “ổ đĩa ảo” bạn có thể thêm vào, gỡ bỏ và thay đổi kích thước một cách nhanh chóng.
 
 ## Ưu điểm
 - Có thể gom nhiều đĩa cứng thành 1 đĩa ảo có dung lượng lớn hơn
