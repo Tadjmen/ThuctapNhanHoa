@@ -104,18 +104,3 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 [root@centos_client network-scripts]#
 
 ```
-
-
-```
-[root@centos_client network-scripts]# route del -net 192.168.1.0/24 gw 192.168.95.1 ens38
-[root@centos_client network-scripts]# route -n
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.95.1    0.0.0.0         UG    100    0        0 ens33
-0.0.0.0         192.168.95.1    0.0.0.0         UG    101    0        0 ens37
-0.0.0.0         192.168.95.1    0.0.0.0         UG    102    0        0 ens38
-192.168.95.0    0.0.0.0         255.255.255.0   U     100    0        0 ens33
-192.168.95.0    0.0.0.0         255.255.255.0   U     101    0        0 ens37
-192.168.95.0    0.0.0.0         255.255.255.0   U     102    0        0 ens38
-[root@centos_client network-scripts]#
-```
