@@ -68,7 +68,7 @@ Syncing disks.
 [root@localhost ~]#
 ```
 
-Kiểm tra lại bằng lệnh `lsblk`
+Kiểm tra lại bằng lệnh `lsblk`  
 <img src="https://i.imgur.com/fUDjiA1.png">
 
 Tạo một phân vùng với LVM
@@ -257,5 +257,7 @@ UUID=db059feb-a0f0-4e05-a2e2-c968def9f502 /dev/sdb xfs defaults 0 0
 ```
 ## Cách xóa bộ nhớ iSCSI
 Trong trường hợp bạn muốn bỏ gắn thêm đĩa, hãy làm theo các thủ tục (unmount và logout).
+```
 [root@centos_client mnt]# umount /mnt/
 [root@centos_client mnt]# iscsiadm -m node -T iqn.2019-11.local.cloudzone.target:disk1 -p 192.168.95.55 -u
+```
