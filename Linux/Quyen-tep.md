@@ -1,5 +1,6 @@
 # Quyền đối với tệp
 Mỗi tệp cũng được liên kết với một nhóm có mối quan tâm đến tệp và các quyền nhất định: đọc, viết và thực thi.
+
 |Lệnh|Kết quả|
 |---|---|
 |chgrp|Cho phép thay đổi nhóm gán với đối tượng tập tin (tập tin, thư mục, liên kết)|
