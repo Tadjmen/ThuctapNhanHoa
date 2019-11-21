@@ -40,6 +40,6 @@ Xin chao Trung!
 |Kí tự|Mô tả|
 |---|---|
 |#|Được sử dụng để thêm nhận xét, trừ khi được sử dụng dưới dạng # hoặc #! khi bắt đầu một kịch bản|
-| | |Được sử dụng ở cuối dòng để biểu thị tiếp tục cho dòng tiếp theo|
+|   |   |Được sử dụng ở cuối dòng để biểu thị tiếp tục cho dòng tiếp theo|
 |;|Được sử dụng để giải thích những gì sau một lệnh mới|
 |$|Chỉ ra cái gì sau đây là một biến|
