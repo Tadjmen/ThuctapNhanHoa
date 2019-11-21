@@ -10,3 +10,6 @@
 9. [Quản Lý User và Group trên Linux](https://github.com/TuongICTU/ThuctapNhanHoa/blob/master/Linux/Quan-ly-user-gr.md)
 10. [Linux process](./Proccesses.md)
 11. [Logical Volume Manager trong Linux](./LVM.md)
+12. 
+13. [Networking](./Basic-network.md)
+14. [Network File System](./NFS.md)
