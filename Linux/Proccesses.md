@@ -62,7 +62,6 @@ Dòng đầu tiên của `top` hiển thị một bản tóm tắt nhanh chóng 
 
 Dòng thứ hai của `top` đầu ra hiển thị tổng số quá trình, số lượng quá trình chạy, ngủ, dừng và zombie. Nhằm đánh giá xem hệ thống có đang hoạt động hiệu quả hay không. 
 
-
 Ngoài ra lệnh ps cũng cho chúng ta thấy, mỗi một Process sẽ có một Process ID, và thuộc về một Process cha nào đó. Process ID là duy nhất đối với mỗi một process, tức là 2 process khác nhau chắc chắn phải có PID khác nhau. Ngoài ra Process ID là không thể thay đổi trong khi chạy process.
 
 ### Kill Process
