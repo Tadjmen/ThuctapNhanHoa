@@ -13,9 +13,9 @@ Tìm kiếm các máy chủ sử dụng giao thức SMB khác
 `yum install -y samba samba-client samba-common`
 
 ## Cấu hình SAMBA SERVER
-Tạo 1 thư mục để Share
-`mkdir -p /samba/share`
-Tiếp theo bạn chạy lệnh sau để lưu 1 bản config.
+Tạo 1 thư mục để Share  
+`mkdir -p /samba/share`  
+Tiếp theo bạn chạy lệnh sau để lưu 1 bản config.  
 `cp /etc/samba/smb.conf /etc/samba/smb.conf.bak`
 
 Chỉnh sửa File Config bằng nội dung sau:
@@ -64,6 +64,9 @@ success
 chmod -R 0755 share/
 chown -R nobody:nobody share/
 ```
+
+Và cuối cùng cho phép truy cập từ SELinux
+`chcon -t samba_share_t anonymous/`
 
 <img src="https://i.imgur.com/gsDsX6V.png">
 Như vậy có thể thấy đã cấu hình thành công Samba File Sever.
