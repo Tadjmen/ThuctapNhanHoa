@@ -74,7 +74,7 @@ Như vậy có thể thấy đã cấu hình thành công Samba File Sever.
 # Chế độ yêu cầu mật khẩu
 Tạo một group và user để cho phép các user trong group đó được phép truy cập vào thư mục share.
 ```
-[root@localhost share]# groupadd sambagroup
+[root@localhost share]# groupadd sambagroup  
 [root@localhost share]# useradd NCT -G sambagroup
 ```
 Tạo Password cho tài khoản NCT vừa tạo
@@ -85,7 +85,8 @@ Retype new SMB password:
 Added user NCT.
 ```
 
-Thêm mục này vào dưới File ConFig tại `/etc/samba/smb.conf`
+Thêm mục này vào dưới File ConFig tại  
+`/etc/samba/smb.conf`
 ```
 [secured]
  path = /samba/sharepass
@@ -94,7 +95,7 @@ Thêm mục này vào dưới File ConFig tại `/etc/samba/smb.conf`
  writable = yes
  browsable = yes
 ```
-Tạo thư mục Share cần Pass
+Tạo thư mục Share cần Pass  
 `[root@localhost samba]# mkdir sharepass`
 
 Cấp quyền và cho phép truy cập từ SELinux
@@ -105,12 +106,12 @@ Cấp quyền và cho phép truy cập từ SELinux
 [root@localhost samba]#
 ```
 
-Nhường quyền lại cho group sambagroup
+Nhường quyền lại cho group sambagroup  
 `[root@localhost samba]# chown -R :sambagroup sharepass/`
 
 Khởi động lại dịch vụ SAMBA
 ``
-#systemctl restart smb.service
+#systemctl restart smb.service  
 #systemctl restart nmb.service
 ``
 Bây giờ khi truy cập lại sẽ phải đăng nhập bằng User của tài khoản vừa tạo
