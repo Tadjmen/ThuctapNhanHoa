@@ -13,3 +13,10 @@
 12. 
 13. [Networking](./Basic-network.md)
 14. [Network File System](./NFS.md)
+15. [iSCSI](./iSCSI.md)
+16. [Basic Security](./Basic-security.md)
+17. [Command Line trong Linux](CMD-Modify.md)
+18. [Lệnh xử lý văn bản](Text-command.md)
+19. [Chương trình Bash](./bash_programming.md)
+20. [System Service](sysservice.md)
+21. [Samba File Sever](Samba.md)
