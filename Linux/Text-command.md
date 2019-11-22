@@ -62,10 +62,6 @@ Antonio Esposito
 Antonio Esposito
 Mario Rossi
 Michele Laforca
-# sort myfile.txt | uniq -c
-      2 Antonio Esposito
-      1 Mario Rossi
-      1 Michele Laforca
 ```
 ```
 [root@centos_client ~]# cat 2.txt
