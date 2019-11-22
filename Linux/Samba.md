@@ -30,7 +30,7 @@ security = user
 map to guest = bad user
 dns proxy = no
 
-[Anonymous]
+[Share]
 path = /samba/share
 browsable =yes
 writable = yes
@@ -58,6 +58,12 @@ success
 [root@localhost samba]# firewall-cmd --reload
 success
 ```
+**Chmod thư mục Share**
+
+```
+chmod -R 0755 share/
+chown -R nobody:nobody share/
+```
 
 <img src="https://i.imgur.com/gsDsX6V.png">
 Như vậy có thể thấy đã cấu hình thành công Samba File Sever.
@@ -74,6 +80,16 @@ Tạo Password cho tài khoản NCT vừa tạo
 New SMB password:
 Retype new SMB password:
 Added user NCT.
+```
+
+Thêm mục này vào dưới File ConFig tại `/etc/samba/smb.conf`
+```
+[secured]
+ path = /samba/sharepass
+ valid users = @sambagroup
+ guest ok = no
+ writable = yes
+ browsable = yes
 ```
 Tạo thư mục Share cần Pass
 `[root@localhost samba]# mkdir sharepass`
