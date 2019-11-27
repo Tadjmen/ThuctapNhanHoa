@@ -1,6 +1,6 @@
 # Cài đặt WordPress qua Script
 Cài đặt `Nghinx`  
-`sudo yum install epel-release `
+`sudo yum install epel-release `  
 `sudo yum install nginx  `
 ```
 sudo systemctl start nginx  
@@ -11,10 +11,10 @@ sudo systemctl enable nginx
 Cài đặt MySQL
 
 
-`yum install wget  `
-`wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm `
-`sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm  `
-`sudo yum install mysql-server  `
+`yum install wget  `  
+`wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm `  
+`sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm  `  
+`sudo yum install mysql-server  `  
 ```
 sudo systemctl start mysqld  
 sudo systemctl status mysqld 
@@ -24,16 +24,16 @@ sudo mysql_secure_installation
 Cài đặt PHP
 
 `wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm  
-rpm -Uvh remi-release-7.rpm  `
-`yum -y install php  `
-`yum --enablerepo=remi,remi-php71 install php-fpm php-common  `
-`yum --enablerepo=remi,remi-php72 install php-opcache php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml  `
+rpm -Uvh remi-release-7.rpm  `  
+`yum -y install php  `  
+`yum --enablerepo=remi,remi-php71 install php-fpm php-common  `  
+`yum --enablerepo=remi,remi-php72 install php-opcache php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-redis php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml  `  
 `php -v  `
 ``
 
 ## Confing Nginx kết hợp cùng PHP
 
-Tạo 1 file mới trong thư mục `conf.d` của nginx
+Tạo 1 file mới trong thư mục `conf.d` của nginx  
 ```
 touch /etc/nginx/conf.d/default.conf
 vi /etc/nginx/conf.d/default.conf  
@@ -66,11 +66,11 @@ server {
     }
 }
 ```
-`sudo service nginx restart  `
+`sudo service nginx restart  `  
 
 Config `php-fpm`:  
 
-`vi /etc/php-fpm.d/www.conf  `
+`vi /etc/php-fpm.d/www.conf  `  
 
 ```
 user = apache => user = nginx
