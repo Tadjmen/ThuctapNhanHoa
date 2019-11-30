@@ -23,13 +23,86 @@ Các tập tin log được đặt trong thư mục `/var/log`. Bất kỳ ứng
 |tail|Xem nội dung cuối File|
 |tailf|Xem nội dung cuối liên tục File log đến khi dừng|
 |grep|Tìm chuỗi|
-|egrep|Sử dụng grep để tìm 2 từ khác nhau : egrep -w 'word1\|word2' /pack to file|
+|egrep|Sử dụng egrep để tìm 2 từ khác nhau : egrep -w 'word1\|word2' /pack to file|
 |ack|Tìm chuỗi|
 |cat|Đọc nội dung File|
 |head|Đọc nội dung đầu File|
 |find|Tìm chuỗi|
 |ls|Liệt kê File, thư mục trong Foder đang đứng|
 |history|Lịch sử lệnh|
+
+
+## Lệnh tail
+`tail [tuỳ chọn] file`
+Trong đó tùy chọn có thể là:  
+- `-n`, số dòng muốn in  
+- `-c`, --byte=[-]n: In số byte n đầu cuối cùng mỗi tệp  
+- `-q`: Không in tiêu đề đầu ra  
+- `-f`: Tiếp tục đọc tập tin cho đến khi CTRL + C  
+- `--help`: Hiển thị các trợ giúp  
+- `--version`: Thông tin về phiên bản và thoát
+
+
+## Lệnh grep
+`grep [tuỳ chọn] file`
+Trong đó:    
+grep "chuỗi cần tìm" ten_file  
+- `-i` tìm kiếm không phân biệt chữ hoa chữ thường  
+- `-v` tìm kiếm ngược, tìm những dòng không chứa từ khóa  
+- `-n`: Hiện thị số dòng của dòng cần tìm  
+- `-c`: Đếm số dòng khớp với kí tự cần tìm  
+- `-m`[chỉ số cần giới hạn]: Giới hạn số lượng dòng khớp  
+- `-e`: tìm kiếm nhiều chuỗi (grep -e "chuoi" -e "chuoi" <file>)  
+- `-w`: tìm kiếm từ khóa chính xác (tìm love sẽ không hiển thị lovely)  
+- `-l`: để có được các tập tin phù hợp với tìm kiếm  
+- `-L`: để có được các tập tin không phù hợp với tìm kiếm
+
+## Lệnh egrep
+Trong đó:  
+Sử dụng egrep để tìm 2 từ khác nhau : egrep -w 'login|success' pack to file
+
+## Lệnh ack
+Cú pháp: `ack chuoi_can_tim thu_muc_can_tim`  
+- `-c`: đếm số từ khóa có trong từng File  
+- `-w`: tìm chính xác từ cần tìm  
+
+
+## Lệnh cat
+Dùng để đọc nội dung file  
+- `-s`: loại bỏ các dòng trống trong file  
+- `-T`: hiển thị kí tự tab thành `^I`  
+- `-n`: hiển thị số đòng  
+
+## Lệnh head
+`head [tuỳ chọn] file`  
+Xem nội dung đầu File, mặc định là 10 dòng  
+- `-n`: tùy chọn số dòng   
+- `-q`: Không in tiêu đề xác định tên tệp  
+- `-v`: Luôn in tiêu đề xác định tên tệp  
+
+
+## Lệnh find
+Cú pháp: `find -name "file_name"`  
+Tìm kiếm file theo tên file đầy đủ  
+- `find . file1.txt`: tìm trong thư mục hiện tại file tên `file1.txt`  
+- `find / -name "conf*"` tìm file tên có đầu là `conf`  
+- `find /home -type f`: trong thư mục /home có bao nhiêu file  
+- `find /home -type d`: trong thư mục /home có bao nhiêu thư mục  
+## Lệnh ls
+Cú pháp: `ls [OPTION] [FILE]`  
+- `-a, –all`	Hiện cả file ẩn (.)  
+- `-c`:	Hiển thị thời gian cập nhật file  
+- `-d`: Hiển thị thông tin thư mục  
+- `-l`: hiện theo danh sách  
+- `-lh`: hiển thị kích thước ở định dạng list  
+- `-ltr`: sẽ cho thấy tập tin sửa đổi mới nhất hoặc ngày thư mục như trước.
+
+## Lệnh history
+Hiển thị lịch sử câu lệnh đã dùng  
+- `history 3` : kèm theo số dòng  
+- `!!` : thực hiện lại câu lệnh gần nhất  
+- `!n` : thực hiện lệnh thứ n trong list history  
+- `!string` : thực hiện câu lệnh cuối cùng bắt đầu bằng text
 
 
 ## Một số log thường gặp
