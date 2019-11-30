@@ -149,6 +149,13 @@ perl -i -pe'
   s/put your unique phrase here/salt()/ge
 ' wp-config.php
 
+config_database(){
+    mysql -u root -e "CREATE DATABASE $1"
+    mysql -u root -e "GRANT ALL PRIVILEGES ON $1.* TO $2@localhost IDENTIFIED BY '$3'"
+}
+
+config_database
+
 #create uploads folder and set permissions
 mkdir wp-content/uploads
 chmod 775 wp-content/uploads
