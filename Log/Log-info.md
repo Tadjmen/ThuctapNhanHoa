@@ -7,13 +7,13 @@ Các tập tin log được đặt trong thư mục `/var/log`. Bất kỳ ứng
 
 ## VD: Ý nghĩa một số file log thông dụng có mặc định trên /var/log
 
+`/var/log/dmesg` – Thư mục này có chứa thông điệp rất quan trọng về kernel ring buffer. Lệnh dmesg có thể được sử dụng để xem các tin nhắn của tập tin này.  
 `/var/log/messages` – Chứa dữ liệu log của thông báo hệ thống nói chung, bao gồm cả các thông báo trong quá trình khởi động hệ thống.  
 `/var/log/cron` – Chứa dữ liệu log của cron deamon. Bắt đầu và dừng cron cũng như cronjob thất bại.  
 `/var/log/maillog` hoặc `/var/log/mail.log` – Thông tin log từ các máy chủ mail.  
 `/var/log/wtmp` – Chứa lịch sử đăng nhập và đăng xuất .  
 `/var/log/btmp` – Thông tin đăng nhập không thành công  
 `/var/run/utmp` – Thông tin log trạng thái đăng nhập hiện tại của mỗi người dùng.  
-`/var/log/dmesg` – Thư mục này có chứa thông điệp rất quan trọng về kernel ring buffer. Lệnh dmesg có thể được sử dụng để xem các tin nhắn của tập tin này.  
 `/var/log/secure` – Thông điệp liên quan đến bảo mật sẽ được lưu trữ ở đây. Điều này bao gồm thông điệp từ SSH daemon, mật khẩu thất bại, người dùng không tồn tại, vv.  
 
 ## Các lệnh thường dùng khi thao tác với Log
