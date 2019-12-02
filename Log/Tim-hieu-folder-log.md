@@ -107,4 +107,3 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 `message Log` chứa thông tin chung về hệ thống  
 <img src="https://i.imgur.com/qjTt64h.png">
 
-
