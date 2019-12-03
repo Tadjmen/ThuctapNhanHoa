@@ -1,13 +1,14 @@
 # Cài đặt WordPress qua Script
-Cài đặt `Nghinx`  
-`sudo yum install epel-release `  
-`sudo yum install nginx  `
-```
-sudo systemctl start nginx  
-sudo systemctl status nginx  
-sudo systemctl enable nginx  
-```
+Cài đặt `Apache`  
 
+`yum install httpd`  
+`systemctl start httpd`  
+`systemctl enable httpd.service`  
+`systemctl status httpd.service`
+```
+firewall-cmd --add-service=http --permanent
+firewall-cmd --reload
+```
 Cài đặt MySQL
 
 
@@ -31,63 +32,6 @@ rpm -Uvh remi-release-7.rpm  `
 `php -v  `
 ``
 
-## Confing Nginx kết hợp cùng PHP
-
-Tạo 1 file mới trong thư mục `conf.d` của nginx  
-```
-touch /etc/nginx/conf.d/default.conf
-vi /etc/nginx/conf.d/default.conf  
-```
-Config như sau: (thay IP hay Domain phù hợp)
-```
-server {  
-    listen   80;
-    server_name  SERVER_IP_OR_DOMAIN;
-
-    # note that these lines are originally from the "location /" block
-    root   /usr/share/nginx/html;
-    index index.php index.html index.htm;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-    error_page 404 /404.html;
-    error_page 500 502 503 504 /50x.html;
-    location = /50x.html {
-        root /usr/share/nginx/html;
-    }
-
-    location ~ \.php$ {
-        try_files $uri =404;
-        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
-        fastcgi_index index.php;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-}
-```
-`sudo service nginx restart  `  
-
-Config `php-fpm`:  
-
-`vi /etc/php-fpm.d/www.conf  `  
-
-```
-user = apache => user = nginx
-
-group = apache => group = nginx
-
-listen.owner = nobody => listen.owner = nginx
-
-listen.group = nobody => listen.group = nginx
-
-;listen = 127.0.0.1:9000 => listen = /var/run/php-fpm/php-fpm.sock
-```
-
-```
-systemctl start php-fpm.service
-systemctl enable php-fpm.service 
-```
 
 Nhập lệnh chạy Script kèm tham số luôn 
 
