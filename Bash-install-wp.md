@@ -21,6 +21,10 @@ sudo systemctl start mysqld
 sudo systemctl status mysqld 
 sudo mysql_secure_installation  
 ```
+```
+firewall-cmd --permanent --add-service=mysql
+firewall-cmd --reload
+```
 
 Cài đặt PHP
 
@@ -95,6 +99,7 @@ perl -i -pe'
 
 config_database(){
     mysql -u root -e "CREATE DATABASE $1"
+    mysql -u root -e ""
     mysql -u root -e "GRANT ALL PRIVILEGES ON $1.* TO $2@localhost IDENTIFIED BY '$3'"
 }
 
