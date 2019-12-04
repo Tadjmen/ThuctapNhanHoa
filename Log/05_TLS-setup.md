@@ -8,7 +8,7 @@ Kết quả có thể thấy Gói tin sử dụng giao thức Syslog được g�
 Bây giờ chúng ta sẽ triển khai TLS để gói tin này bị bắt cũng không thể đọc được.
 
 ## Mô hình
-<img url="https://i.imgur.com/OjB10YC.jpg">
+<img url="https://i.imgur.com/jVC1xul.png">
 
 Cả hai nút được cài đặt với CentOS 7, node2 sẽ là client của chúng và node3 sẽ hoạt động như máy chủ log.
 
