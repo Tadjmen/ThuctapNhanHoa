@@ -127,3 +127,13 @@ Khi sử dụng Logrotate, bạn sẽ thấy:
 - rotation được thiết lập cho 2 files: `/var/log/wtmp` và `/var/log/btmp`
 
 
+
+
+
+
+
+
+
+
+
+
