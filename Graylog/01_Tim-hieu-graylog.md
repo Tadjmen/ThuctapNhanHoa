@@ -45,4 +45,4 @@ Graylog có khả năng gộp chung và giải nén các dữ liệu quan trọn
 
 
 
-## Để hiểu rõ hơn ta sẽ tiến hành [triển khai Graylog](./02_trien-khai-graylog.md)
+## Để hiểu rõ hơn ta sẽ tiến hành [Cài đặt Graylog](./02_trien-khai-graylog.md)
