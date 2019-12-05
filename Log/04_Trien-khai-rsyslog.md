@@ -80,7 +80,14 @@ Tạo File cấu hình tại `/etc/rsyslog.d/`
 `*.*                     @192.168.182.55:514`  
 `systemctl restart rsyslog`
 
-Định dạng cấu hình theo định dạng sau
+## Client Windows
+Đối với Client ta sử dụng `datagram syslog agent`
+<img src="https://i.imgur.com/tm7KSZ3.png">
+
+Sau khi tải về và cài đặt các agent, chúng ta cần phải cấu hình nó để chạy như một dịch vụ. Xác định giao thức, ip, cổng của máy chủ rsyslog từ xa, và những loại bản ghi được truyền đi.
+
+--- 
+## Cấu hình định dạng cấu hình theo định dạng sau
 
 `[facility-level].[Priority-level]  [destination]`
 
