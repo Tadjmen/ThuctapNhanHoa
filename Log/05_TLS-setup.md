@@ -301,6 +301,9 @@ $InputTCPServerRun 514  # start up listener at port 10514
 $InputTCPServerStreamDriverMode 1  # run driver in TLS-only mode
 $InputTCPServerStreamDriverAuthMode anon
 
+$template RemoteServer, "/var/log/%fromhost-ip%/%SYSLOGFACILITY-TEXT%.log" 
+*.* ?RemoteServer
+
 ```
 ## Cài đặt GnuTLS trên máy Sever
 ```
