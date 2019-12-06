@@ -26,6 +26,7 @@ apt-get -y update
 apt-get install -y git vim byobu 
 ```
 
+# Setup trên Kali Linux (tương tự Ubuntu)
 ## Cài đặt graylog sidecar và filebeat
 ###  Cài đặt filebeat
 Như đã giới thiệu, `Graylog sidecar` chỉ là agent nhận lệnh điều khiển từ `graylog server`, để thực hiện việc thu thập log thì ta cần kết hợp với `filebeat` hoặc `NXLog`. Trong hướng dẫn này sẽ lựa chọn thành phần collector là `filebeat`.
@@ -62,7 +63,9 @@ Nhấp vào `create token`
 Chọn dòng `Copy to clipboard` để sao chép chuỗi token
 
 
-Đây là dòng token đối với hướng dẫn này 1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0. Với Lab của bạn thì chuỗi này sẽ là dãy ký tự khác.
+Đây là dòng token đối với User sidecar này  **1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0**
+
+ Với Lab của bạn thì chuỗi này sẽ là dãy ký tự khác.
 Quay lại máy client ,
 
 ### Cấu hình sidecar 
@@ -160,7 +163,7 @@ Thông số ở File Configuration có thể tùy chỉnh lại cho phù hợp.
 
 **Lưu ý: Dòng 12 là địa chỉ và cổng vừa config ở bước trước đó**
 
-Quay lại tab System ==> Sidecars để chọn áp dụng khai báo ở trên, chọn tab Manage sidecars
+Quay lại tab `System` ==> `Sidecars` để chọn áp dụng khai báo ở trên, chọn tab `Manage sidecars`
 
 <img src="https://i.imgur.com/wir8k7v.png">
 
@@ -181,3 +184,98 @@ Chúng ta SSH vào máy Client cài sidecar xem có gửi log về sever hay kh�
 <img src="https://i.imgur.com/ExDizR1.png">
 
 Như vậy chúng ta đã thực hiện thành công cấu hình graylog thu thập log bằng sidecar.
+
+
+# Setup trên Windows
+## Cài đặt graylog sidecar
+Đối với Windows ta truy cập vào địa chỉ https://github.com/Graylog2/collector-sidecar/releases để download.  
+Tải file installer dành cho `windows`
+<img src="https://i.imgur.com/xTZY02t.png">
+
+Lưu ý là dùng https, cấu hình đúng IP với `Graylog Sever` như sau:
+
+<img src="https://i.imgur.com/9fG5TgX.png">
+
+
+Để lấy chuỗi TOKEN trên server. Thực hiện như sau:
+
+Đăng nhập vào graylog server, sau đó truy cập vào tab `System` ==> `Sidecars`. Sau đó chọn dòng `Create or reuse a token for the graylog-sidecar user`.
+
+Nhấp vào `create token`
+<img src="https://i.imgur.com/0yqZNP9.png">
+
+Chọn dòng `Copy to clipboard` để sao chép chuỗi token
+
+
+Đây là dòng token đối với User sidecar này **1i3tj0173hat1lsv8sehj9pro1c6ridot6nil248oti34hgc9n9l**
+
+Cấu hình như sau:  Sau khi cấu hình, phấp vào Install
+<img src="https://i.imgur.com/DNwZW6r.png">
+
+Chỉnh sửa File cấu hình được tạo ra tại đường dẫn:
+```
+C:\Program Files\Graylog\sidecar\sidecar.yml
+```
+
+
+## Cấu hình sidecar trên server.
+### Khai báo input cho sidecar
+Trước khi cấu hình sidecar, ta cần khai báo input để graylog server hiểu nó sẽ nhận log từ đâu. Ta thực hiện như sau:
+
+Truy cập vào menu `System` ==> `Inputs`. Sau đó chọn `Beats` và click vào `Launch new input`.
+
+Ở các mục dưới khai báo như sau:
+
+`Node`: Chọn tab localhost
+`Title`: BeatInput
+`Bind address`: Địa chỉ IP của graylog server.
+`Port`: Sửa lại port mà bạn muốn, ở phần hướng dẫn này tôi - chọn **7514**. Lưu ý port này sẽ được khai báo ở các bước tiếp theo.
+
+Các mục còn lại bỏ qua
+
+Truy cập vào
+
+<img src="https://i.imgur.com/Vbn7An6.png">
+
+## Cấu hình sidecar trên server.
+Đăng nhập vào graylog server với tài khoản admin.
+Truy cập vào `System` ==> `Sidecars`  
+<img src="https://i.imgur.com/iVqndeJ.png">
+
+
+Chọn tab `Configuration`
+
+<img src="https://i.imgur.com/1SkaV6V.png">
+
+Chọn tab `Create configuration`
+
+<img src="https://i.imgur.com/XSxhrTy.png">
+
+Khai báo theo thông số như sau.
+<img src="https://i.imgur.com/HPybQjg.png">
+
+Chú ý dòng số 7 là thông tin địa chỉ IP của `Sever Graylog`
+
+Nhấn **Create**
+
+Trên Client Windows mở CMD với chế độ `Administrator`
+
+<img src="https://i.imgur.com/IiNqnSP.png">
+
+Sử dụng lần lượt 2 lệnh sau:
+```
+"C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service install
+
+"C:\Program Files\graylog\sidecar\graylog-sidecar.exe" -service start
+```
+Vào kiểm tra lại trong Service xem Service đã chạy chưa
+
+<img src="https://i.imgur.com/gqOFLpY.png">
+
+```
+firewall-cmd --permanent --add-port=7514/udp
+firewall-cmd --permanent --add-port=7514/tcp
+firewall-cmd --reload
+```
+
+
