@@ -44,5 +44,17 @@ Graylog có khả năng gộp chung và giải nén các dữ liệu quan trọn
 - Elasticsearch 2.x: Elasticsearch là một công cụ tìm kiếm dựa trên nền tảng Apache Lucene. Nó cung cấp một bộ máy tìm kiếm dạng phân tán, có đầy đủ công cụ với một giao diện web HTTP có hỗ trợ dữ liệu JSON. Elasticsearch được phát triển bằng Java và được phát hành dạng nguồn mở theo giấy phép Apache.
 
 
+## Khái niệm về Stream, cách dùng
+
+
+
+
+
+- Khái niệm về Sidecar, cách dùng
+- Tìm hiểu về khái niệm content pack
+- Tìm hiểu về khái niệm regex
+- Tìm hiểu về khái niệm pipeline
+- Tìm hiểu khái niệm extractor
+
 
 ## Để hiểu rõ hơn ta sẽ tiến hành [Cài đặt Graylog](./02_Cai-dat-graylog.md)
