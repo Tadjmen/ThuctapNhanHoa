@@ -26,14 +26,158 @@ apt-get -y update
 apt-get install -y git vim byobu 
 ```
 
+## Cài đặt graylog sidecar và filebeat
+###  Cài đặt filebeat
+Như đã giới thiệu, `Graylog sidecar` chỉ là agent nhận lệnh điều khiển từ `graylog server`, để thực hiện việc thu thập log thì ta cần kết hợp với `filebeat` hoặc `NXLog`. Trong hướng dẫn này sẽ lựa chọn thành phần collector là `filebeat`.
+
+Thực hiện cài đặt filebeat cho Ubuntu
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+```
+```
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
+apt-get install -y apt-transport-https
+apt-get update -y 
+apt-get install -y filebeat
+```
+
+## Cài đặt graylog sidecar
+Đối với bản Graylog Server 3.0 ta sẽ dùng graylog sidecar 1.x trở lên
+```
+cd /root/ 
+
+wget https://github.com/Graylog2/collector-sidecar/releases/download/1.0.2/graylog-sidecar_1.0.2-1_amd64.deb
+```
+```
+sudo dpkg -i graylog-sidecar_1.0.2-1_amd64.deb
+```
+
+Để lấy chuỗi TOKEN trên server. Thực hiện như sau:
+
+Đăng nhập vào graylog server, sau đó truy cập vào tab `System` ==> `Sidecars`. Sau đó chọn dòng `Create or reuse a token for the graylog-sidecar user`.
+
+Nhấp vào `create token`
+<img src="https://i.imgur.com/TkPxq5h.png">
+
+Chọn dòng `Copy to clipboard` để sao chép chuỗi token
 
 
+Đây là dòng token đối với hướng dẫn này 1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0. Với Lab của bạn thì chuỗi này sẽ là dãy ký tự khác.
+Quay lại máy client ,
+
+### Cấu hình sidecar 
+```
+vi /etc/graylog/sidecar/sidecar.yml
+```
+Dòng server_url khai báo IP của máy graylog server
+
+server_url: "http://192.168.56.11:9000/api/"  
+
+Dòng server_api_token là giá trị chuỗi token ở bước trên
+
+server_api_token: "1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0"
+Sửa dòng node_name để khai báo hostname của client02
+
+node_name: "clientkali"
+Bỏ comment dòng update_interval
+
+update_interval: 10
+Bỏ comment dòng cache_path
+cache_path: "/var/cache/graylog-sidecar"
+Bỏ dấu comment dòng node_id
+
+node_id: "file:/etc/graylog/sidecar/node-id"
+Bỏ comment dòng log_path
+
+log_path: "/var/log/graylog-sidecar"
+Bỏ comment dòng list_log_files và sửa dòng /var/log/nginx thành /var/log/
+
+list_log_files:
+    - "/var/log/"
+
+## Khởi động và kích hoạt graylog sidecar
+```
+graylog-sidecar -service install
+systemctl start graylog-sidecar
+systemctl enable  graylog-sidecar
+```
+```
+systemctl status graylog-sidecar
+```
+Như hình là thành công
+<img src="https://i.imgur.com/CRuS5Zf.png">
 
 
+# Cấu hình sidecar trên server.
+
+## Khai báo input cho sidecar
+Trước khi cấu hình sidecar, ta cần khai báo input để graylog server hiểu nó sẽ nhận log từ đâu. Ta thực hiện như sau:
+
+Truy cập vào menu `System` ==> `Inputs`. Sau đó chọn `Beats` và click vào `Launch new input`.
 
 
+Ở các mục dưới khai báo như sau:
+
+- `Node`: Chọn tab localhost
+- `Title`: BeatInput
+- `Bind address`: Địa chỉ IP của graylog server.
+- `Port`: Sửa lại port mà bạn muốn, ở hướng dẫn này tôi - chọn 9514. Lưu ý port này sẽ được khai báo ở các bước tiếp theo.
+- Các mục còn lại bỏ qua
+
+<img src="https://i.imgur.com/ieGYRyZ.png">
+
+Sau đó nhấn `Save`
+
+## Cấu hình sidecar trên server.
+Đăng nhập vào graylog server với tài khoản admin.
+Truy cập vào `System` ==> `Sidecars`
+<img src="https://i.imgur.com/iVqndeJ.png">
+
+Chọn tab `Configuration`
+
+<img src="https://i.imgur.com/1SkaV6V.png">
+
+Chọn tab `Create configuration`
+
+<img src="https://i.imgur.com/XSxhrTy.png">
+
+Khai báo theo thông số như sau.
+<img src="https://i.imgur.com/q6KRYnP.png">
+
+Nhấn Create
+
+Mở port với Port vừa cấu hình
 
 
+```
+firewall-cmd --permanent --add-port=9514/udp
+firewall-cmd --permanent --add-port=9514/tcp
+firewall-cmd --reload
+```
 
 
+Thông số ở File Configuration có thể tùy chỉnh lại cho phù hợp. 
 
+**Lưu ý: Dòng 12 là địa chỉ và cổng vừa config ở bước trước đó**
+
+Quay lại tab System ==> Sidecars để chọn áp dụng khai báo ở trên, chọn tab Manage sidecars
+
+<img src="https://i.imgur.com/wir8k7v.png">
+
+Chọn trường filebeat và áp cấu hình
+
+<img src="https://i.imgur.com/RgShlnE.png">
+
+Chọn `Confirm`
+
+<img src="https://i.imgur.com/ZpW4Trs.png">
+
+
+# Kiểm tra xem đã hoạt động hay chưa
+
+Đứng trên server mở tab `Search`.
+Chúng ta SSH vào máy Client cài sidecar xem có gửi log về sever hay không.
+
+<img src="https://i.imgur.com/ExDizR1.png">
+
+Như vậy chúng ta đã thực hiện thành công cấu hình graylog thu thập log bằng sidecar.
