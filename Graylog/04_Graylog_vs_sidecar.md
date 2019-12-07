@@ -302,3 +302,4 @@ Tại Graylog Sever quay trở lại trang chủ, logout windows7 xong dăng nh�
 
 Như vậy ta đã thấy log đăng xuất và đăng nhập trên windows.
 
+## Như vậy ta đã cấu hình thành công cấu hình graylog thu thập log bằng sidecar trên Windows.
