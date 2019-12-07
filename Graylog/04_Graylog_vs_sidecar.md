@@ -207,10 +207,10 @@ Nhấp vào `create token`
 Chọn dòng `Copy to clipboard` để sao chép chuỗi token
 
 
-Đây là dòng token đối với User sidecar này **1i3tj0173hat1lsv8sehj9pro1c6ridot6nil248oti34hgc9n9l**
+Đây là dòng token đối với User sidecar này **1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0**
 
 Cấu hình như sau:  Sau khi cấu hình, phấp vào Install
-<img src="https://i.imgur.com/DNwZW6r.png">
+<img src="https://i.imgur.com/O46p50c.png">
 
 Chỉnh sửa File cấu hình được tạo ra tại đường dẫn:
 ```
@@ -272,10 +272,33 @@ Vào kiểm tra lại trong Service xem Service đã chạy chưa
 
 <img src="https://i.imgur.com/gqOFLpY.png">
 
-```
-firewall-cmd --permanent --add-port=7514/udp
-firewall-cmd --permanent --add-port=7514/tcp
-firewall-cmd --reload
-```
+Như vậy chúng ta đã thấy Service Graylog Sidecar đã đang chạy
 
+<img src="https://i.imgur.com/1EEg8yf.png">
+
+## Cấu hình trên graylog server để nhận log từ windows.
+
+Nếu cấu hình đúng và mọi việc suôn sẻ thì khi truy cập vào tab `System` ==> `Sidecar` ta sẽ thấy client là windows đã hiển thị ở màn hình dưới.
+
+<img src="https://i.imgur.com/l2Wyp9F.png">
+
+Chọn tiếp tab Manager sidecar
+
+<img src="https://i.imgur.com/Y7etIKA.png">
+
+Sau đó tick chọn như hình dưới  
+<img src="https://i.imgur.com/EXlfEH1.png">
+
+Sau đó chọn Confirm  
+<img src="https://i.imgur.com/pSnOfJE.png">
+
+Tiếp tục chọn `Process` ==> `Start`  
+<img src="https://i.imgur.com/XWcgbBJ.png">
+
+## Kiểm tra logon 
+Tại Graylog Sever quay trở lại trang chủ, logout windows7 xong dăng nhập lại xem log có hiện lên hay không.
+
+<img src="https://i.imgur.com/eFtymlq.png">
+
+Như vậy ta đã thấy log đăng xuất và đăng nhập trên windows.
 
