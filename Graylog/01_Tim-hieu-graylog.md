@@ -38,16 +38,17 @@ Graylog có khả năng gộp chung và giải nén các dữ liệu quan trọn
 • Mở rộng với REST API. 
 
 ## Các thành phần trong Graylog
+
+**Elasticsearch 2.x**: Elasticsearch là một công cụ tìm kiếm dựa trên nền tảng Apache Lucene. Nó cung cấp một bộ máy tìm kiếm dạng phân tán, có đầy đủ công cụ với một giao diện web HTTP có hỗ trợ dữ liệu JSON. Elasticsearch được phát triển bằng Java và được phát hành dạng nguồn mở theo giấy phép Apache.  
+Việc search treen Graylog do Elasticsearch đảm nhận toàn bộ.
+
+
 - Một Cloud Sever Centos 7 hoặc Ubuntu với ít nhất 2 GB RAM, đóng vai trò là máy chủ quản lý log tập trung. 
 - Oracle JDK ( Java Development Toolkit) 8, đóng vai trò là trình biên dịch, trình thông dịch, trình giúp sửa lỗi.
 - MongoDB: là một chương trình cơ sở dữ liệu
-- Elasticsearch 2.x: Elasticsearch là một công cụ tìm kiếm dựa trên nền tảng Apache Lucene. Nó cung cấp một bộ máy tìm kiếm dạng phân tán, có đầy đủ công cụ với một giao diện web HTTP có hỗ trợ dữ liệu JSON. Elasticsearch được phát triển bằng Java và được phát hành dạng nguồn mở theo giấy phép Apache.
 
 
 ## Khái niệm về Stream, cách dùng
-
-
-
 
 
 - Khái niệm về Sidecar, cách dùng
