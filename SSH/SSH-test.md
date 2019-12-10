@@ -11,7 +11,7 @@ Dec  9 10:57:47 centos-7-client sshd[1698]: pam_succeed_if(sshd:auth): requireme
 Dec  9 10:57:49 centos-7-client sshd[1698]: Failed password for root from 192.168.182.1 port 52522 ssh2
 
 
-**Second**
+**Second**  
 Dec  9 10:59:06 centos-7-client sshd[1698]: pam_succeed_if(sshd:auth): requirement "uid >= 1000" not met by user "root"
 Dec  9 10:59:09 centos-7-client sshd[1698]: Failed password for root from 192.168.182.1 port 52522 ssh2
 
@@ -47,7 +47,7 @@ Dec  9 11:05:47 centos-7-client sshd[1759]: Connection closed by 192.168.182.1 p
 Dec  9 20:29:07 kali sshd[1415]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.182.1  user=root
 Dec  9 20:29:09 kali sshd[1415]: Failed password for root from 192.168.182.1 port 50009 ssh2
 
-
+---
 
 Dec  9 20:29:41 kali sshd[1415]: Failed password for root from 192.168.182.1 port 50009 ssh2
 
