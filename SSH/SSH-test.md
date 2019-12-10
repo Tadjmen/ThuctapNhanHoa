@@ -1,24 +1,8 @@
-ls -t
-ls -tr
-
-
-
-
-
-
-
-
-
-
-
-
-
+## ls -t
+## ls -tr
 
 
 # Centos 7
-
-
-
 # SSH sai pass
 **First**
 
@@ -63,4 +47,36 @@ Dec  9 11:05:47 centos-7-client sshd[1759]: Connection closed by 192.168.182.1 p
 # Kali Linux
 
 # SSH sai pass
-**First*
+Dec  9 20:29:07 kali sshd[1415]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.182.1  user=root
+Dec  9 20:29:09 kali sshd[1415]: Failed password for root from 192.168.182.1 port 50009 ssh2
+
+
+
+Dec  9 20:29:41 kali sshd[1415]: Failed password for root from 192.168.182.1 port 50009 ssh2
+
+
+# SSH đúng pass
+
+Dec  9 20:30:19 kali sshd[1417]: Accepted password for root from 192.168.182.1 port 50022 ssh2
+Dec  9 20:30:19 kali sshd[1417]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Dec  9 20:30:19 kali systemd-logind[548]: New session 6 of user root.
+
+
+
+# SSH non User
+Dec  9 20:31:21 kali sshd[1433]: Invalid user foekfoa from 192.168.182.1 port 50036
+
+**Nhập Pass**
+
+Dec  9 20:31:45 kali sshd[1433]: pam_unix(sshd:auth): check pass; user unknown
+Dec  9 20:31:45 kali sshd[1433]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.182.1 
+Dec  9 20:31:46 kali sshd[1433]: Failed password for invalid user foekfoa from 192.168.182.1 port 50036 ssh2
+
+
+# Exit
+
+Dec  9 20:32:37 kali sshd[1441]: Received disconnect from 192.168.182.1 port 50049:11: disconnected by user
+Dec  9 20:32:37 kali sshd[1441]: Disconnected from user root 192.168.182.1 port 50049
+Dec  9 20:32:37 kali sshd[1441]: pam_unix(sshd:session): session closed for user root
+Dec  9 20:32:37 kali systemd-logind[548]: Session 7 logged out. Waiting for processes to exit.
+Dec  9 20:32:37 kali systemd-logind[548]: Removed session 7.
