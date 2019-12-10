@@ -41,9 +41,6 @@ Dec  9 11:05:47 centos-7-client sshd[1759]: Connection closed by 192.168.182.1 p
 
 
 
-
-
-
 # Kali Linux
 
 # SSH sai pass
