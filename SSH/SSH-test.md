@@ -40,6 +40,23 @@ Dec  9 11:05:13 centos-7-client sshd[1759]: Failed password for invalid user fgf
 Dec  9 11:05:47 centos-7-client sshd[1759]: Connection closed by 192.168.182.1 port 52704 [preauth]
 
 
+# Su trong Centos Sai pass
+ 
+Dec 10 09:44:18 centos-7-client su: pam_unix(su:auth): authentication failure; logname=tuong uid=1000 euid=0 tty=pts/1 ruser=tuong rhost=  user=root
+Dec 10 09:44:18 centos-7-client su: pam_succeed_if(su:auth): requirement "uid >= 1000" not met by user "root"
+
+# Su trong Centos Đúng pass
+
+Dec 10 09:38:48 centos7client01 su: pam_unix(su:session): session opened for user root by root(uid=1000)
+
+# Close Su
+
+Dec 10 09:41:56 centos-7-client su: pam_unix(su:session): session closed for user root
+
+
+
+
+
 
 # Kali Linux
 
