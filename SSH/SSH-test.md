@@ -77,3 +77,6 @@ Dec  9 20:32:37 kali sshd[1441]: Disconnected from user root 192.168.182.1 port 
 Dec  9 20:32:37 kali sshd[1441]: pam_unix(sshd:session): session closed for user root
 Dec  9 20:32:37 kali systemd-logind[548]: Session 7 logged out. Waiting for processes to exit.
 Dec  9 20:32:37 kali systemd-logind[548]: Removed session 7.
+
+
+https://vi.wikipedia.org/wiki/Bi%E1%BB%83u_th%E1%BB%A9c_ch%C3%ADnh_quy
