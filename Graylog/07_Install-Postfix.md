@@ -33,13 +33,13 @@ Create a `/etc/postfix/sasl_passwd` file and add following line:
 ```
 
 Phân quyền
-
+```
 postmap /etc/postfix/sasl_passwd
 chown root:postfix /etc/postfix/sasl_passwd*
 chmod 640 /etc/postfix/sasl_passwd*
 systemctl reload postfix
-
-## Test 
+```
+## Kiểm tra 
 
 ```
 echo "This is a test." | mail -s "test message" ngocattuong1997@gmail.com
@@ -48,7 +48,8 @@ echo "This is a test." | mail -s "test message" ngocattuong1997@gmail.com
 <img src="https://i.imgur.com/Nw8puFo.png">
 
 ```
-service postfix restart
+systemctl restart postfix
+systemctl enable postfix
 ```
 
 ```
