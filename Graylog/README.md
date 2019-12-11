@@ -4,6 +4,6 @@
 3. [Cấu hình Graylog thu thập log bằng syslog](./03_Graylog_vs_syslog.md)
 4. [Cấu hình Graylog thu thập log bằng Sidecar(Ubuntu && Windows)](./04_Graylog_vs_sidecar.md)
 5. [Tạo Stream và Rule cho Stream Graylog](./05_Graylog-Stream-ssh.md)
-6. [Graylog Extractor](./06_Graylog_Extractor.md)
+6. [Graylog Extractor]
 7. [Cài đặt PostFix để gửi Email](./07_Install-Postfix.md)
 
