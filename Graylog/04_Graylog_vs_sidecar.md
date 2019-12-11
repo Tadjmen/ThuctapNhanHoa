@@ -73,41 +73,55 @@ Quay lại máy client ,
 vi /etc/graylog/sidecar/sidecar.yml
 ```
 Dòng server_url khai báo IP của máy graylog server
-
-server_url: "http://192.168.56.11:9000/api/"  
-
+```
+server_url: "http://192.168.182.55:9000/api/"  
+```
 Dòng server_api_token là giá trị chuỗi token ở bước trên
-
+```
 server_api_token: "1k0b2em89q8r12pbe336bh97ab8dcrhnrbemkg64nem5bpurn5a0"
+```
 Sửa dòng node_name để khai báo hostname của client02
-
+```
 node_name: "clientkali"
+```
 Bỏ comment dòng update_interval
-
+```
 update_interval: 10
+```
 Bỏ comment dòng cache_path
+```
 cache_path: "/var/cache/graylog-sidecar"
+```
 Bỏ dấu comment dòng node_id
-
+```
 node_id: "file:/etc/graylog/sidecar/node-id"
+```
 Bỏ comment dòng log_path
-
+```
 log_path: "/var/log/graylog-sidecar"
+```
 Bỏ comment dòng list_log_files và sửa dòng /var/log/nginx thành /var/log/
-
+```
 list_log_files:
-    - "/var/log/"
+    - "/var/log/*"
+```
+## Khởi động và kích hoạt graylog sidecar, filebeat
 
-## Khởi động và kích hoạt graylog sidecar
 ```
 graylog-sidecar -service install
 systemctl start graylog-sidecar
 systemctl enable  graylog-sidecar
 ```
 ```
+systemctl start filebeat
+systemctl enable filebeat
+systemctl status filebeat
+```
+
+```
 systemctl status graylog-sidecar
 ```
-Như hình là thành công
+Như hình là thành công  
 <img src="https://i.imgur.com/CRuS5Zf.png">
 
 
