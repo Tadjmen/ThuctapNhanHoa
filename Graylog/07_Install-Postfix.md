@@ -60,5 +60,3 @@ firewall-cmd --permanent --add-port=25/tcp
 firewall-cmd --permanent --add-port=25/udp
 firewall-cmd --reload
 ```
-
-
