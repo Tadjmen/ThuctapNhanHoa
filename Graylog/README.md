@@ -6,4 +6,5 @@
 5. [Tạo Stream và Rule cho Stream Graylog](./05_Graylog-Stream-ssh.md)
 6. [Graylog Extractor]
 7. [Cài đặt PostFix để gửi Email](./07_Install-Postfix.md)
+8. [Tích hợp Email gửi cảnh báo alerts](08_Tich-hop-email-alerts.md)
 
