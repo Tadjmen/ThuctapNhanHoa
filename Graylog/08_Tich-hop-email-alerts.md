@@ -44,31 +44,21 @@ Sau đó nhấn Next sang phần `Notifications`, nhấn `Add Notication` mà ta
 
 <img src="https://i.imgur.com/fqQx7BQ.png">
 
+## Sửa file cấu hình của Graylog-Sever để có thể gửi mail
+```
+vi /etc/graylog/server/server.conf
+```
+<img src="https://i.imgur.com/loUb77Z.png">
+
+```
+systemctl restart graylog-server.service
+systemctl status graylog-server.service
+```
+
 # Kiểm tra kết quả
 Bây giờ ta hãy thử SSH sai 5 lần nếu có Email cảnh báo gửi về là cấu hình thành công
 
 <img src="https://i.imgur.com/xtf7FXu.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
