@@ -6,7 +6,20 @@ Các Sự kiện trên Linux được ghi lại vào File log, còn đối với
 ## Log về Security
 Name: **Security**
 - **EventID 4625**: An account failed to log on.: Đăng nhập sai
+    -  thông tin lấy được bao gồm:
+        - Security ID:		NULL SID
+	    - Account Name:		Tên accout
+	    - Account Domain:		Tên máy
+
 - **EventID 4624**: An account was successfully logged on.: Đăng nhập thành công
+    - thông tin lấy được bao gồm:
+        - Security ID:	ID event
+        - Account Name:	 Account Name trên máy
+        - Account Domain:	Account Domain trên máy chủ Domain
+        - Logon ID:	Logon ID	
+        - Logon GUID:	Logon GUID
+        - Workstation Name:	Tên máy Remote tới
+
 - **EventID 4634**: An account was logged off.: Một tài khoản đã Logoff
  
 ## Log về Remote Desktop 
@@ -31,6 +44,8 @@ và
 Name: **Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational**		
 
 - **EventID 140**: Remote Desktop sai user hoặc password
+    -  thông tin lấy được bao gồm:
+        - IP đăng nhập sai
 		
 		
 		
