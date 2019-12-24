@@ -1,6 +1,15 @@
-# Cấu hình Graylog để đẩy log qua nhiều Card mạng sử dụng Sidecar
+# Cấu hình Graylog để đẩy log qua nhiều Card mạng
 Trong trường hợp máy Graylog Server có nhiều card mạng mà ta muốn nhận log từ Toàn bộ các Card mạng đó, trong bài viết này mình sẽ trình bày nội dung cấu hình để có thể nhận Log từ nhiều Card mạng trên máy Graylog Server sử dụng Sidecar
 
+# Cấu hình Graylog để đẩy log qua nhiều Card mạng sử dụng Syslog
+## Cấu hình trên Graylog Server
+Truy cập `System` ==> `Input`
+
+<img src="https://i.imgur.com/imcBLJl.png">
+
+Sau đó thực hiện đẩy log qua card mạng cùng dải mạng với máy Client
+
+# Cấu hình Graylog để đẩy log qua nhiều Card mạng sử dụng Sidecar
 ## Cấu hình trên Graylog Server
 Đối với Graylog Server đã cấu hình sử dụng Graylog để quản lý log tập trung như đã hướng dẫn tại [Cài đặt Graylog](./02_Cai-dat-graylog.md)
 
