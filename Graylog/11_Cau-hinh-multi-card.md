@@ -68,7 +68,8 @@ systemctl restart rsyslog
 ## Mô hình
 <img src="https://i.imgur.com/pqwuZyy.jpg">
 
-Chú ý: Client 1 đã cấu hình như trên trong mô hình cả 2 Client đều sử dụng Syslog, trong mô hình này Client 2 sẽ sử dụng Sidecar để đẩy Log lên Graylog Server
+**Chú ý: Trong mô hình 2 máy Client sử dụng Syslog thì Client 1 đã được cấu hình để gửi log qua Syslog, trong mô hình này Client 2 sẽ sử dụng Sidecar để đẩy Log lên Graylog Server.**
+
 
 # Cấu hình trên server.
 ## Khai báo input cho sidecar
