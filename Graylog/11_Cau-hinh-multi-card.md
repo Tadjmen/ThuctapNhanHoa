@@ -17,7 +17,7 @@ Thay đổi địa chỉ ip của trường `http_bind_address` thành ip `0.0.0
 
 
 ```
-systemctl status graylog-sidecar
+systemctl status graylog-server
 ```
 Kiểm tra ip trên máy chủ Graylog Server
 
