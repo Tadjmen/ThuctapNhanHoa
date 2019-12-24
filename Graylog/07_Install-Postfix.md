@@ -7,6 +7,10 @@ yum -y install postfix cyrus-sasl-plain mailx
 yum install postfix
 ```
 ```
+alternatives --set mta /usr/sbin/postfix
+alternatives --set mta /usr/sbin/sendmail.postfix
+```
+```
 systemctl restart postfix
 ```
 ## Step 2 – Configure Postfix
