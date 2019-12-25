@@ -1,17 +1,36 @@
-# Các EventID quan trọng đối với Remote Desktop
+# Xem các bản ghi về Remote Desktop trên Windows bằng công cụ Event Viewer
+
 Các Sự kiện trên Linux được ghi lại vào File log, còn đối với windows sẽ được ghi vào Event View theo các Name cụ thể ứng với từng log.
 
-Trong bài viết này chúng ta sẽ list ra các trường hợp khi Remote Desktop tới máy chủ Windows
+Các trường hợp khi Remote Desktop tới máy chủ Windows có thể sảy ra như sau:
+- Khi Remote Desktop đúng User đúng Password
+- Khi Remote Đúng User sai Password
+- Khi Remote sai User
+- Remote sai User hoặc Password
 
-Để mở Event viewer ta bấm tổ hợp phím `Windows+R` sau đó nhập `eventvwr`
+Để xem được các bản ghi về Remote Desktop trên Windows thì ta cần sử dụng công cụ `Event View` của Windows
+
+Để mở Event viewer ta làm như sau:
+
+Bấm tổ hợp phím `Windows+R` sau đó nhập `eventvwr`
 <img src="https://i.imgur.com/UjofXA0.png">
 
-## Khi Remote Desktop đúng User đúng Password
-Kiểm tra tại `Event viewer` > `Windows Logs` > `Security`
+## TH1: Remote Desktop đúng User đúng Password
+Trong Event Viewer chọn `Windows Logs` -> Nhấn chọn `Security` ở cửa sổ bên trái
 
-Sẽ thấy xuất hiện Event ID 4624 được định nghĩa là Event ID sẽ được sinh ra khi có một kết nối Remote Desktop thành công vào máy chủ.
+Ở cửa sổ bên phải -> Nhấn chuột chọn trường `Filter Current Log`.
 
-<img src="https://i.imgur.com/dRqiars.png">
+<img src="https://i.imgur.com/K9ia7q7.png">
+
+Trong hộp thoại tiếp theo, nhập dòng `4624` vào hộp văn bản bên dưới “`Includes/Excludes Event IDs…`”
+
+<img src="https://i.imgur.com/HYZVig9.png">
+
+Nhấn OK để lọc nhật ký sự kiện ( Event log )
+
+Bây giờ, Trình xem sự kiện (Event Viewer ) sẽ chỉ hiển thị các sự kiện liên quan đến Remote Desktop đúng
+
+<img src="https://i.imgur.com/JTVKBB7.png">
 
 tại đây ta có thể thấy được những thông tin sau:
 - Event ID: 4624
@@ -29,12 +48,24 @@ Trong đó:
 - level: mức độ cảnh báo
 - Computer: Tên máy tính được đăng nhập
 
-## Khi Remote Đúng User sai Password
-Kiểm tra tại `Event viewer` > `Windows Logs` > `Security`
+Trên đây là cách tìm nhật ký Remote đúng trong Windows, chúng ta sẽ sang phần tiếp theo, Remote Sai Password
 
-Sẽ thấy xuất hiện Event ID 4625 được định nghĩa là Event ID sẽ được sinh ra khi có một kết nối Remote Desktop thất bại vào máy chủ.
+## TH 2: Remote Đúng User sai Password
+Trong Event Viewer chọn `Windows Logs` -> Nhấn chọn `Security` ở cửa sổ bên trái
 
-<img src="https://i.imgur.com/WUveSqq.png">
+Ở cửa sổ bên phải -> Nhấn chuột chọn trường `Filter Current Log`.
+
+<img src="https://i.imgur.com/K9ia7q7.png">
+
+Trong hộp thoại tiếp theo, nhập dòng `4625` vào hộp văn bản bên dưới “`Includes/Excludes Event IDs…`”
+
+<img src="https://i.imgur.com/oJRiy15.png">
+
+Nhấn OK để lọc nhật ký sự kiện ( Event log )
+
+Bây giờ, Trình xem sự kiện (Event Viewer ) sẽ chỉ hiển thị các sự kiện liên quan đến Remote Desktop thất bại
+
+<img src="https://i.imgur.com/e1hL90M.png">
 
 
 tại đây ta có thể thấy được những thông tin sau:
@@ -53,15 +84,33 @@ Trong đó:
 - level: mức độ cảnh báo
 - Computer: Tên máy tính được đăng nhập
 
-<img src="https://i.imgur.com/znU7iYd.png">
+Trên đây là cách tìm nhật ký Remote đúng trong Windows, chúng ta sẽ sang phần tiếp theo, Remote Sai User
 
-## Khi Remote sai User
-Kiểm tra tại `Event viewer` > `Windows Logs` > `Security`
+## TH 3: Remote sai User
+Trong Event Viewer chọn `Windows Logs` -> Nhấn chọn `Security` ở cửa sổ bên trái
 
-Sẽ thấy xuất hiện Event ID 4625 được định nghĩa là Event ID sẽ được sinh ra khi có một kết nối Remote Desktop thất bại vào máy chủ.
+Ở cửa sổ bên phải -> Nhấn chuột chọn trường `Filter Current Log`.
 
-<img src="https://i.imgur.com/omEBq6a.png">
 
+<img src="https://i.imgur.com/K9ia7q7.png">
+
+Trong hộp thoại tiếp theo, nhập dòng `4625` vào hộp văn bản bên dưới “`Includes/Excludes Event IDs…`”
+
+<img src="https://i.imgur.com/oJRiy15.png">
+
+Nhấn OK để lọc nhật ký sự kiện ( Event log )
+
+Bây giờ, Trình xem sự kiện (Event Viewer ) sẽ chỉ hiển thị các sự kiện liên quan đến Remote Desktop thất bại. 
+
+<img src="https://i.imgur.com/e1hL90M.png">
+
+Click chuột 2 lần vào EventID `4625`
+
+<IMG SRC="https://i.imgur.com/OCLROAmg.png">
+
+Sẽ thấy một cửa sổ hiện lên, trong phần mô tả có trường `Account Name` là tên User bị Remote tới
+
+<img src="https://i.imgur.com/sQ23dDi.png">
 
 tại đây ta có thể thấy được những thông tin sau:
 - Event ID: 4625
@@ -82,17 +131,22 @@ Trong đó:
 - Computer: Tên máy tính được đăng nhập
 *Chú ý*: *Có thêm phần Account Name*
 
-## Remote sai User hoặc Password
-Kiểm tra tại `Event viewer` > `Applications and Services Logs` > `Microsoft` > `Windows` > `RemoteDesktopServices-RdpCoreTS` > `Operational`
+## TH 2 & 3 Remote sai User hoặc Password
+Trong Event Viewer chọn `Applications and Services Logs` > `Microsoft` > `Windows` > `RemoteDesktopServices-RdpCoreTS` > `Operational` ở cửa sổ bên trái
 
-Nhấn vào `Filter Current log...`
+Ở cửa sổ bên phải -> Nhấn chuột chọn trường `Filter Current Log`.
+
 <img src="https://i.imgur.com/MZTf7qD.png">
 
-Tìm EventID 140
+Trong hộp thoại tiếp theo, nhập dòng `140` vào hộp văn bản bên dưới “`Includes/Excludes Event IDs…`”
 
 <img src="https://i.imgur.com/HOxoEvP.png">
 
-Sẽ chỉ thấy xuất hiện Event ID 140 được định nghĩa là Event ID sẽ được sinh ra khi có một kết nối Remote Desktop thất bại vào máy chủ.
+Nhấn OK để lọc nhật ký sự kiện ( Event log )
+
+Bây giờ, Trình xem sự kiện (Event Viewer ) sẽ chỉ hiển thị các sự kiện liên quan đến Remote Desktop thất bại. 
+
+<img src="https://i.imgur.com/cQjtlJ9.png">
 
 tại đây ta có thể thấy được những thông tin sau:
 - Event ID: 140
