@@ -134,6 +134,8 @@ Trong đó:
 - Computer: Tên máy tính được đăng nhập
 *Chú ý*: *Có thêm phần Account Name*
 
+Trên đây là cách tìm nhật ký Remote thất bại khi nhập sai User trong Windows, chúng ta sẽ sang phần tiếp theo, Remote Sai User hoặc Password
+
 ## TH 2 & 3 Remote sai User hoặc Password
 Trong Event Viewer chọn `Applications and Services Logs` > `Microsoft` > `Windows` > `RemoteDesktopServices-RdpCoreTS` > `Operational` ở cửa sổ bên trái
 
@@ -173,3 +175,5 @@ Trong đó:
 Lưu ý: trên phần bản tin Log có ghi lại IP đã thực hiện Remote Desktop sai vào máy chủ, từ đây có thể trích xuất thông tin để xử lý, phần khoanh đỏ là phần IP Remote thất bại
 
 <img src="https://i.imgur.com/tEiLfsu.png">
+
+Trên đây là cách tìm nhật ký Remote thất bại trong Windows, Remote Sai User hoặc password và cách tìm địa chỉ ip đã đăng nhập sai để tiến hành các biện pháp xử lý.
