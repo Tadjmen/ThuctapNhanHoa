@@ -75,7 +75,16 @@ systemctl restart rsyslog
 ## Khai báo input cho sidecar
 Trước khi cấu hình sidecar, ta cần khai báo input để graylog server hiểu nó sẽ nhận log từ đâu. Ta thực hiện như sau:
 
-Truy cập vào menu `System` ==> `Inputs`. Sau đó chọn `Beats` và click vào `Launch new input`.
+Mở File cấu hình Graylog Server
+```
+vi /etc/graylog/server/server.conf
+```
+Bỏ comment dòng `http_publish_uri` và sửa thành 
+```
+http_publish_uri = http://0.0.0.0:9000/
+```
+
+Trên giao diện Web Interfaces truy cập vào menu `System` ==> `Inputs`. Sau đó chọn `Beats` và click vào `Launch new input`.
 Ở các mục dưới khai báo như sau:
 - Node: Chọn tab localhost
 - Title: BeatInput
@@ -153,6 +162,6 @@ Chọn `Confirm`
 Đứng trên server mở tab `Search`.
 Chúng ta SSH vào máy Client cài sidecar xem có gửi log về sever hay không.
 
-<img src="https://i.imgur.com/ExDizR1.png">
+<img src="https://i.imgur.com/y4hwmGo.png">
 
 Như vậy chúng ta đã thực hiện thành công cấu hình graylog thu thập log bằng sidecar.
