@@ -8,6 +8,9 @@ Các trường hợp khi Remote Desktop tới máy chủ Windows có thể sảy
 - Khi Remote sai User
 - Remote sai User hoặc Password
 
+1. [Tìm tài khoản User bị nhập sai](#th-3-remote-sai-user)
+2. [Tìm IP Remote thực hiện Remote thất bại](#th-2--3-remote-sai-user-hoặc-password)
+
 Để xem được các bản ghi về Remote Desktop trên Windows thì ta cần sử dụng công cụ `Event View` của Windows
 
 Để mở Event viewer ta làm như sau:
