@@ -14,9 +14,19 @@ Trở về menu Stream nhấn vào Manage Rules
 <img src="https://i.imgur.com/jXlbgum.png">
 
 Nhấn `Add stream Rule` và thêm lần lượt 2 `Rule` như sau:  
-<img src="https://i.imgur.com/cvfCaVV.png">  
+<img src="https://i.imgur.com/cvfCaVV.png"> 
+
 <img src="https://i.imgur.com/4jTxnEl.png">
+
+```
+Failed password for .+ from .+
+```
+
 <img src="https://i.imgur.com/UPScKGI.png">
+
+```
+Accepted password for .+ from .+
+```
 
 Nhấn `I'm Done ` 
 <img src="https://i.imgur.com/4eV691w.png">
