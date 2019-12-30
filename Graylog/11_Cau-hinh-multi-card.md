@@ -7,11 +7,16 @@ Trong trường hợp máy Graylog Server có nhiều card mạng mà ta muốn 
 
 ## Cấu hình trên Graylog Server
 
-Sửa File cấu hình Graylog Server tại /etc/graylog/server/server.conf
+
+Mở File cấu hình Graylog Server
 ```
 vi /etc/graylog/server/server.conf
 ```
-Thay đổi địa chỉ ip của trường `http_bind_address` thành ip `0.0.0.0` như hình sau, mọi cấu hình khác giữ nguyên.
+Bỏ comment dòng `http_publish_uri` và sửa thành 
+```
+http_publish_uri = http://0.0.0.0:9000/
+```
+
 
 <img src="https://i.imgur.com/rTvTpI2.png">
 
