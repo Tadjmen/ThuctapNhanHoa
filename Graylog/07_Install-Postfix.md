@@ -36,6 +36,8 @@ Create a `/etc/postfix/sasl_passwd` file and add following line:
 [smtp.gmail.com]:587 username:password
 ```
 
+**Lưu ý: username:password là địa chỉ gmail và password của bạn**
+
 Phân quyền
 ```
 postmap /etc/postfix/sasl_passwd
@@ -43,6 +45,16 @@ chown root:postfix /etc/postfix/sasl_passwd*
 chmod 640 /etc/postfix/sasl_passwd*
 systemctl reload postfix
 ```
+
+Truy cập vào địa chỉ
+```
+https://myaccount.google.com/lesssecureapps
+```
+
+<img src="https://i.imgur.com/PbD2rj3.png">
+
+Bật quyền truy cập của ứng dụng kém an toàn để Postfix có thể đăng nhập vào Gmail
+
 ## Kiểm tra 
 
 ```
