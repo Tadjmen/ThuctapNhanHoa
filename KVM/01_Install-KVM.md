@@ -1,4 +1,6 @@
 # Install KVM
+Cài đặt KVM để có thể cài đặt các máy ảo lên KVM giống như VMWare hay Vitualbox. Các bước cài đặt như sau:
+
 Bật ảo hóa trên Vmware
 
 <img src="https://i.imgur.com/PqSA82r.png">
