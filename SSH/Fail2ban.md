@@ -9,7 +9,9 @@
 
 # Bài toán
 Kẻ xấu biết được IP của Sever chúng ta, kẻ xấu có thể thực hiện cuộc tấn công vét cạn mật khẩu tới sever. Giải pháp để chúng ta chấm dứt vấn đề này đó là sử dụng một công cụ tự động block IP khi VPS bị tấn công, đó là Fail2Ban. Hôm nay, mình sẽ giới thiệu cách hướng dẫn và cài đặt trong bài này.
-<A name="lagi">
+
+<a name="lagi">
+
 **Fail2Ban** là một ứng dụng chạy nền theo dõi log file để phát hiện những địa chỉ IP đăng nhập sai password SSH nhiều lần. Sau đó, Fail2Ban sử dụng iptable firewall rules để block ngay địa chỉ IP với một khoảng thời gian định trước.
 <a name="caidat">
 
