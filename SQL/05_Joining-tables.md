@@ -155,6 +155,7 @@ INNER JOIN committees c USING(name);
 
 Cũng gần giống `inner join` Nếu các giá trị trong hai hàng không khớp nhau, mệnh đề `LEFT JOIN` vẫn tạo một hàng mới có các cột chứa các cột của hàng trong bảng bên trái và NULL cho các cột của hàng trong bảng bên phải.
 
+Kiểu kết nối này trả về các hàng nằm ở bảng bên trái trong điều kiện ON và chỉ lấy ở các bảng còn lại những hàng đáp ứng được điều kiện đặt ra.  
 Cú pháp cơ bản:
 ```
 SELECT column_list 
@@ -198,7 +199,8 @@ WHERE c.committee_id IS NULL;
 
 ## Mệnh đề RIGHT JOIN 
 Mệnh đề RIGHT JOIN tương tự như mệnh đề LEFT JOIN trừ việc xử lý các bảng được đảo ngược.  
-Mệnh đề RIGHT JOIN chọn tất cả các hàng từ bảng bên phải và khớp với các hàng trong bảng bên trái. Nếu một hàng từ bảng bên phải không có các hàng khớp với bảng bên trái, thì cột của bảng bên trái sẽ có NULL trong tập kết quả cuối cùng.
+
+Kiểu kết nối này trả về các hàng nằm ở bảng bên phải trong điều kiện ON và chỉ lấy ở các bảng còn lại những hàng đáp ứng được điều kiện đặt ra
 
 Cú pháp:
 ```
@@ -286,31 +288,6 @@ CROSS JOIN committees c;
 <img src="https://i.imgur.com/Kj4Rp2u.png">
 
 Trong hướng dẫn này, bạn đã học được nhiều câu lệnh JOIN MySQL khác nhau bao gồm cross join, inner join, left join và right join để truy vấn dữ liệu từ hai bảng.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
