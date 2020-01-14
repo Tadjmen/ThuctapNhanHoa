@@ -18,3 +18,4 @@ SELECT id
 <img src="https://i.imgur.com/HpPAnmd.png">
 
 Khi truy vấn dữ liệu từ một bảng, bạn có thể nhận được các hàng trùng lặp. Để xóa các hàng trùng lặp này, bạn sử dụng mệnh đề `DISTINCT` trong câu lệnh `SELECT`.
+
