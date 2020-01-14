@@ -13,7 +13,7 @@ ORDER BY
    ...;
 ```
 
-ASC là viết tắt của tăng dần và DESC là viết tắt của giảm dần. Bạn sử dụng ASC để sắp xếp tập kết quả theo thứ tự tăng dần và DESC để sắp xếp tập kết quả theo thứ tự giảm dần.  
+`ASC` là viết tắt của tăng dần và `DESC` là viết tắt của giảm dần. Bạn sử dụng ASC để sắp xếp tập kết quả theo thứ tự tăng dần và `DESC` để sắp xếp tập kết quả theo thứ tự giảm dần.  
 Mệnh đề ORDER BY này sắp xếp kết quả được đặt theo thứ tự tăng dần:
 ```
 ORDER BY column1 ASC;
