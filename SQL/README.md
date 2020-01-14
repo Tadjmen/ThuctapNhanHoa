@@ -4,3 +4,4 @@
 3. [Sorting data](./03_Sorting-data.md)
 4. [Filtering data](./04_Filtering-data.md)
 5. [Joining tables](./05_Joining-tables.md)
+6. [Grouping data](./06_Grouping-data.md)
