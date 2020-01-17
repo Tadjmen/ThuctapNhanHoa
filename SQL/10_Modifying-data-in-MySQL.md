@@ -1,8 +1,8 @@
 # Modifying data in MySQL
-1. [MySQL INSERT]()
-2. [MySQL UPDATE]()
-3. [MySQL DELETE]()
-4. [MySQL REPLACE]()
+1. [MySQL INSERT](#mysql-insert)
+2. [MySQL UPDATE](#mysql-update)
+3. [MySQL DELETE](#mysql-delete)
+4. [MySQL REPLACE](#mysql-replace)
 ## MySQL INSERT
 Cú pháp:  
 ```
