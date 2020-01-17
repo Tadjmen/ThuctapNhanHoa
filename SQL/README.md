@@ -5,3 +5,7 @@
 4. [Filtering data](./04_Filtering-data.md)
 5. [Joining tables](./05_Joining-tables.md)
 6. [Grouping data](./06_Grouping-data.md)
+7. [Subqueries](./07_Subqueries.md)
+8. [Common Table Expressions (CTE)](./08_Common-Table-Expressions.md)
+9. [Set operators](./09_Set-operators.md)
+10. [Modifying data in MySQL](./10_Modifying-data-in-MySQL.md)
