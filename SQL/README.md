@@ -9,3 +9,5 @@
 8. [Common Table Expressions (CTE)](./08_Common-Table-Expressions.md)
 9. [Set operators](./09_Set-operators.md)
 10. [Modifying data in MySQL](./10_Modifying-data-in-MySQL.md)
+11. [MySQL transaction](./11_MySQL-transaction.md)
+12. [Managing MySQL databases and tables](./12_Managing-MySQL-databases-and-tables.md)
