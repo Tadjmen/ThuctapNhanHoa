@@ -18,6 +18,9 @@
 17. [ADVANCED TECHNIQUES](./17_ADVANCED-TECHNIQUES.md)
 
 
+## Tài liệu chính thức 
+https://www.mysqltutorial.org/basic-mysql-tutorial.aspx
+
 
 
 
