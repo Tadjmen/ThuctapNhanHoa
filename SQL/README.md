@@ -11,3 +11,18 @@
 10. [Modifying data in MySQL](./10_Modifying-data-in-MySQL.md)
 11. [MySQL transaction](./11_MySQL-transaction.md)
 12. [Managing MySQL databases and tables](./12_Managing-MySQL-databases-and-tables.md)
+13. [MySQL data types](./13_MySQL-data-types.md)
+14. [MySQL constraints](./14_MySQL-constraints.md)
+15. [MySQL globalization](./15_MySQL-globalization.md)
+16. [MySQL import export](./16_MySQL-import-export.md)
+17. [ADVANCED TECHNIQUES](./17_ADVANCED-TECHNIQUES.md)
+
+
+
+
+
+
+
+
+
+
