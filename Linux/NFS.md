@@ -1,4 +1,4 @@
-# Hệ thống tập tin trong mạng
+# Network File System
 
 Cài đặt NFS trên CentOS  
 `sudo yum install nfs-utils`  
